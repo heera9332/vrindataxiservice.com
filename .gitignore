@@ -1,0 +1,8 @@
+*.png
+*.jpeg
+*.jpg
+*.gif
+
+vrida/public/uploads/**
+vrinda-taxi/public/uploads/**/*
+.vscode/sftp.json
