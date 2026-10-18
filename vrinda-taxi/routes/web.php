@@ -22,6 +22,24 @@ Route::get('/vrindavan-sightseeing', function () {return view('front-end.vrindav
 Route::get('/package', function () {return view('front-end.package'); })->name('package');
 Route::get('/vrindavan-to-rishikesh-taxi-service', function () {return view('front-end.vrindavan-to-rishikesh-taxi-service'); });
 
+Route::get('/uploads/{folder}/{filename}', function ($folder, $filename) {
+    $path = public_path("uploads/{$folder}/{$filename}");
+    if (file_exists($path)) {
+        return response()->file($path, [
+            'Cache-Control' => 'public, max-age=604800',
+        ]);
+    }
+
+    $parentPath = dirname(base_path()) . "/uploads/{$folder}/{$filename}";
+    if (file_exists($parentPath)) {
+        return response()->file($parentPath, [
+            'Cache-Control' => 'public, max-age=604800',
+        ]);
+    }
+
+    abort(404);
+})->where('filename', '.*');
+
 Route::get('/{slug}', [BookingController::class, 'taxiService'])->name('taxi.service');
 
 

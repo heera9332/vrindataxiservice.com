@@ -59,7 +59,7 @@
 
                         @if($admin->profile_image)
                             <div class="mb-2">
-                                <img src="{{ asset('public/uploads/profile_image/' . $admin->profile_image) }}"
+                                <img src="{{ asset('uploads/profile_image/' . $admin->profile_image) }}"
                                                  width="100"
                                                  height="60"
                                                  style="object-fit:cover; border-radius:5px;">

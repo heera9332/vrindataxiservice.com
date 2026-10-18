@@ -59,7 +59,7 @@
 
                                         @if($package->banner_image)
 
-                                            <img src="{{ asset('public/uploads/tours/' . $package->banner_image) }}"
+                                            <img src="{{ asset('uploads/tours/' . $package->banner_image) }}"
                                                  width="80"
                                                  height="60"
                                                  style="object-fit:cover; border-radius:5px;">

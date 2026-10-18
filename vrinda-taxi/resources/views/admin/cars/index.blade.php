@@ -62,10 +62,15 @@
                     <td>{{ $car->id }}</td>
 
                     <td>
-                        <img src="{{ asset('public/uploads/cars/'.$car->car_image) }}"
-                             width="80"
-                             height="60"
-                             style="object-fit:cover;">
+                        @if($car->car_image)
+                            <img src="{{ $car->image_url ?? asset('uploads/cars/'.$car->car_image) }}"
+                                 width="80"
+                                 height="60"
+                                 style="object-fit:cover; border-radius:4px;"
+                                 alt="{{ $car->car_name }}">
+                        @else
+                            <span class="badge badge-secondary">No Image</span>
+                        @endif
                     </td>
 
                     <td>{{ $car->car_name }}</td>

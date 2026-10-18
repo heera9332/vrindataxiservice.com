@@ -284,10 +284,14 @@
 
                             @if($car->car_image)
 
-                                <img src="{{ asset('public/uploads/cars/'.$car->car_image) }}"
+                                <img src="{{ $car->image_url ?? asset('uploads/cars/'.$car->car_image) }}"
                                      width="150"
-                                     class="mb-3">
+                                     class="mb-3 img-thumbnail"
+                                     style="max-height: 150px; object-fit: cover;"
+                                     alt="{{ $car->car_name }}">
 
+                            @else
+                                <p class="text-muted">No Image uploaded</p>
                             @endif
 
                         </div>
@@ -298,7 +302,14 @@
 
                             <input type="file"
                                    name="car_image"
-                                   class="form-control">
+                                   class="form-control"
+                                   accept="image/*"
+                                   onchange="previewEditCarImage(event)">
+
+                            <div class="mt-2" id="editImagePreviewContainer" style="display:none;">
+                                <label class="text-muted">Selected New Image Preview:</label><br>
+                                <img id="editImagePreview" src="#" alt="Preview" style="max-height: 120px; border-radius: 4px;" class="img-thumbnail">
+                            </div>
 
                         </div>
 
@@ -316,4 +327,24 @@
 
 </div>
 
+@endsection
+
+@section('scripts')
+<script>
+    function previewEditCarImage(event) {
+        const input = event.target;
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('editImagePreview');
+                const container = document.getElementById('editImagePreviewContainer');
+                if (preview && container) {
+                    preview.src = e.target.result;
+                    container.style.display = 'block';
+                }
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
 @endsection

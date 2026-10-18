@@ -583,7 +583,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
                             </div>
                             <div class="car-img">
-                                <img src="{{ asset('public/uploads/cars/'. $car->car_image) }}" alt="Innova Crysta" />
+                                <img src="{{ $car->image_url ?? asset('uploads/cars/'. $car->car_image) }}" alt="{{ $car->car_name }}" />
                             </div>
                             <div class="car-content">
                                 <h4><a href="car-single.php">{{$car->car_name}}</a></h4>

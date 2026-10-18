@@ -9,7 +9,7 @@
 
         <!-- breadcrumb -->
 
-        <div class="site-breadcrumb ng-mt" style="background: url('{{ asset('public/uploads/tours/'.$tour->banner_image) }}')">
+        <div class="site-breadcrumb ng-mt" style="background: url('{{ asset('uploads/tours/'.$tour->banner_image) }}')">
 
             <div class="container">
 
@@ -82,7 +82,7 @@
                         <div class="col-xl-8 col-lg-8">
                             <div class="service-details">
                                 <div class="mb-30">
-                                    <img src="{{ asset('public/uploads/tours/'.$tour->featured_image) }}" alt="thumb">
+                                    <img src="{{ asset('uploads/tours/'.$tour->featured_image) }}" alt="thumb">
                                 </div>
                                 <div class="content">
 

@@ -73,15 +73,21 @@
                             <!-- Car Image -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Car Image</label>
+                                    <label>Car Image <span class="text-danger">*</span></label>
                                     <div class="custom-file">
                                         <input type="file"
                                                name="car_image"
                                                class="custom-file-input"
-                                               id="carImage">
-                                        <label class="custom-file-label" for="carImage">
+                                               id="carImage"
+                                               accept="image/*"
+                                               onchange="previewCarImage(event)"
+                                               required>
+                                        <label class="custom-file-label" for="carImage" id="carImageLabel">
                                             Choose file
                                         </label>
+                                    </div>
+                                    <div class="mt-2" id="imagePreviewContainer" style="display:none;">
+                                        <img id="imagePreview" src="#" alt="Preview" style="max-height: 100px; border-radius: 4px;" class="img-thumbnail">
                                     </div>
                                 </div>
                             </div>
@@ -89,9 +95,7 @@
                             <!-- Passengers -->
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Seating Capacity
-
-                                    </label>
+                                    <label>Seating Capacity</label>
                                     <input type="number"
                                            name="passengers"
                                            class="form-control"
@@ -100,28 +104,29 @@
                                 </div>
                             </div>
 
-                             <div class="col-md-3">
+                            <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Car Model
-                                        
-                                    </label>
+                                    <label>Car Model</label>
                                     <input type="text"
                                            name="car_model"
                                            class="form-control"
-                                           placeholder="Enter car model">
+                                           placeholder="Enter car model"
+                                           value="{{ old('car_model') }}">
                                 </div>
                             </div>
 
-
-                            <div class="form-group">
-                                <label>Transmission Type</label>
-                                <select name="transmission_type" class="form-control" required>
-                                    <option value="">-- Select Transmission Type --</option>
-                                    <option value="manual">Manual</option>
-                                    <option value="automatic">Automatic</option>
-                                    <option value="semi_automatic">Semi Automatic</option>
-                                </select>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Transmission Type</label>
+                                    <select name="transmission_type" class="form-control" required>
+                                        <option value="">-- Select Transmission Type --</option>
+                                        <option value="manual" {{ old('transmission_type') == 'manual' ? 'selected' : '' }}>Manual</option>
+                                        <option value="automatic" {{ old('transmission_type') == 'automatic' ? 'selected' : '' }}>Automatic</option>
+                                        <option value="semi_automatic" {{ old('transmission_type') == 'semi_automatic' ? 'selected' : '' }}>Semi Automatic</option>
+                                    </select>
+                                </div>
                             </div>
+
                             <!-- Bags -->
                             <div class="col-md-3">
                                 <div class="form-group">
@@ -146,19 +151,17 @@
                                 </div>
                             </div>
 
-                          
-
-
-
-                            <div class="form-group">
-                                <label>Fuel Type</label>
-                                <select name="fuel_type" class="form-control" required>
-                                    <option value="">-- Select Fuel Type --</option>
-                                    <option value="petrol">Petrol</option>
-                                    <option value="diesel">Diesel</option>
-                                    <option value="cng">CNG</option>
-                                    <option value="petrol_cng">Petrol + CNG</option>
-                                </select>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Fuel Type</label>
+                                    <select name="fuel_type" class="form-control" required>
+                                        <option value="">-- Select Fuel Type --</option>
+                                        <option value="petrol" {{ old('fuel_type') == 'petrol' ? 'selected' : '' }}>Petrol</option>
+                                        <option value="diesel" {{ old('fuel_type') == 'diesel' ? 'selected' : '' }}>Diesel</option>
+                                        <option value="cng" {{ old('fuel_type') == 'cng' ? 'selected' : '' }}>CNG</option>
+                                        <option value="petrol_cng" {{ old('fuel_type') == 'petrol_cng' ? 'selected' : '' }}>Petrol + CNG</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <!-- Price Per KM -->
@@ -247,7 +250,28 @@
 
 @endsection
 
+@section('scripts')
 <script>
+    function previewCarImage(event) {
+        const input = event.target;
+        if (input.files && input.files[0]) {
+            const fileName = input.files[0].name;
+            const label = document.getElementById('carImageLabel');
+            if (label) label.innerText = fileName;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('imagePreview');
+                const container = document.getElementById('imagePreviewContainer');
+                if (preview && container) {
+                    preview.src = e.target.result;
+                    container.style.display = 'block';
+                }
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
     setTimeout(function () {
         let alerts = document.querySelectorAll('.flash-msg');
 
@@ -262,3 +286,4 @@
 
     }, 4000); // 4 seconds
 </script>
+@endsection

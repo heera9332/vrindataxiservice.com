@@ -90,7 +90,7 @@
                                            class="form-control">
 
                                     @if($tour->banner_image)
-                                        <img src="{{ asset('public/uploads/tours/'.$tour->banner_image) }}"
+                                        <img src="{{ asset('uploads/tours/'.$tour->banner_image) }}"
                                              width="120"
                                              class="mt-2">
                                     @endif
@@ -108,7 +108,7 @@
                                            class="form-control">
 
                                     @if($tour->featured_image)
-                                        <img src="{{ asset('public/uploads/tours/'.$tour->featured_image) }}"
+                                        <img src="{{ asset('uploads/tours/'.$tour->featured_image) }}"
                                              width="120"
                                              class="mt-2">
                                     @endif
