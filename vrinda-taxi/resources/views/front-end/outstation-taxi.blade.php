@@ -28,14 +28,14 @@
 <meta property="og:description" content="Affordable taxi service in Vrindavan near Chaar Dham Mandir. Local & outstation cab with safe drivers. Book now!">
 <meta property="og:url" content="https://vrindataxiservice.com/">
 <meta property="og:site_name" content="Vrinda Taxi Service">
-<meta property="og:image" content="{{ asset('front-end/assets/img/logo/logo.png') }}">
+<meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
 <meta property="og:locale" content="en_IN">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Taxi Service in Vrindavan | Vrinda Taxi">
 <meta name="twitter:description" content="Book trusted taxi service in Vrindavan near Chaar Dham Mandir. 24/7 cab available.">
-<meta name="twitter:image" content="{{ asset('front-end/assets/img/logo/logo.png') }}">
+<meta name="twitter:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
 
 <!-- Local SEO (Geo Tags) -->
 <meta name="geo.region" content="IN-UP">
@@ -52,7 +52,7 @@
   "@context": "https://schema.org",
   "@type": "TaxiService",
   "name": "Vrinda Taxi Service",
-  "image": "{{ asset('front-end/assets/img/logo/logo.png') }}",
+  "image": "{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}",
   "@id": "https://vrindataxiservice.com/",
   "url": "https://vrindataxiservice.com/",
   "telephone": "+919452667708",
@@ -249,16 +249,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
                 <!-- <div class="carousel-item active">
-                    <img src="{{ asset('front-end/assets/img/hero/1.png') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="{{ asset('vrinda-taxi/assets/img/hero/1.png') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('front-end/assets/img/hero/slider1.webp') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="{{ asset('vrinda-taxi/assets/img/hero/slider1.webp') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('front-end/assets/img/hero/slider2.webp') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="{{ asset('vrinda-taxi/assets/img/hero/slider2.webp') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('front-end/assets/img/hero/slider3.webp') }} " alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="{{ asset('vrinda-taxi/assets/img/hero/slider3.webp') }} " alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div> -->
             </div>
 
@@ -449,10 +449,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <div class="col-lg-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay="${delay}s">
                           <div class="gallery-img">
-                            <img src="{{ asset('front-end/assets/img/gallery/gal/${imageNumber}.webp') }}" alt="Gallery Image ${imageNumber}" class="img-fluid" />
+                            <img src="{{ asset('vrinda-taxi/assets/img/gallery/gal/${imageNumber}.webp') }}" alt="Gallery Image ${imageNumber}" class="img-fluid" />
                           </div>
                           <div class="gallery-content">
-                            <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/gal/${imageNumber}.webp') }}">
+                            <a class="popup-img gallery-link" href="{{ asset('vrinda-taxi/assets/img/gallery/gal/${imageNumber}.webp') }}">
                               <i class="fal fa-plus"></i>
                             </a>
                           </div>

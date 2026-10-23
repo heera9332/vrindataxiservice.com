@@ -2,18 +2,18 @@
 <!--Design By VIP Digital Hub -->
 
 
-  <link rel="icon" type="image/x-icon" href="{{ asset('front-end/assets/img/logo/favicon.png') }}" />
+  <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/all-fontawesome.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/animate.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/magnific-popup.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/owl.carousel.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/slimselect.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/flatpickr.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/style.css') }}" />    
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/all-fontawesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/magnific-popup.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/slimselect.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/flatpickr.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/style.css') }}" />    
     <header class="header header-2">
 
         <!-- header top -->
@@ -129,12 +129,12 @@
 
                     <a class="navbar-brand" href="/">
 
-                        <!--<img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="logo" />-->
+                        <!--<img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="logo" />-->
                         
                         
                         
                         
-                        <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" 
+                        <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" 
      alt="logo"
      style="width:150px; height:auto; max-height:80px; object-fit:contain; " />
                         
@@ -167,10 +167,10 @@
 
                             <a href="/" class="offcanvas-brand" id="offcanvasNavbarLabel">
 
-                                <!--<img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="" />-->
+                                <!--<img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="" />-->
                                 
                                 
-                                <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" 
+                                <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" 
      alt="logo"
      style="width:120px; height:auto; max-height:50px; object-fit:contain; display:block; margin-left:0; margin-right:auto;" />
                                 
@@ -469,7 +469,7 @@
 
             <a href="/" class="sidebar-popup-logo">
 
-                <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="" />
+                <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="" />
 
             </a>
 

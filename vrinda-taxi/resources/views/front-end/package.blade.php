@@ -13,17 +13,17 @@
     <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="front-end/assets/img/logo/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />
 
     <!-- css -->
-    <link rel="stylesheet" href="front-end/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="front-end/assets/css/all-fontawesome.min.css" />
-    <link rel="stylesheet" href="front-end/assets/css/animate.min.css" />
-    <link rel="stylesheet" href="front-end/assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="front-end/assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="front-end/assets/css/slimselect.min.css" />
-    <link rel="stylesheet" href="front-end/assets/css/flatpickr.min.css" />
-    <link rel="stylesheet" href="front-end/assets/css/style.css" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/all-fontawesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/magnific-popup.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/slimselect.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/flatpickr.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/style.css') }}" />
     
     
     
@@ -93,7 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--===== header ==========-->
     <main class="main">
         <!-- breadcrumb -->
-        <div class="site-breadcrumb ng-mt" style="background: url(front-end/assets/img/breadcrumb/01.jpg)">
+        <div class="site-breadcrumb ng-mt" style="background: url('{{ asset('vrinda-taxi/assets/img/breadcrumb/01.jpg') }}')">
             <div class="container">
                 <h3 class="breadcrumb-title">Package</h3>
                 <ul class="breadcrumb-menu">
@@ -125,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p1.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p1.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">2 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -148,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p2.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p2.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -171,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p3.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p3.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -193,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- 4 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src="front-end/assets/img/package/p4.webp" class="card-img-top" alt="">
+                            <img src="{{ asset('vrinda-taxi/assets/img/package/p4.webp') }}" class="card-img-top" alt="">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="fw-bold">Braj 84 Kos Yatra Short Tour</h5>
                                 <p class="text-muted">Sacred Braj Bhoomi pilgrimage circuit.</p>
@@ -214,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p5.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p5.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">1 Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -237,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p6.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p6.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Same Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -261,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p7.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p7.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -284,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p9.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p9.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -308,7 +308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p10.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p10.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -331,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p11.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p11.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Festival</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -354,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p12.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p12.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -377,7 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="front-end/assets/img/package/p13.webp" class="card-img-top" alt="">
+                                <img src="{{ asset('vrinda-taxi/assets/img/package/p13.webp') }}" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">

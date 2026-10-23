@@ -13,17 +13,17 @@
     <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/slimselect.min.css" />
-    <link rel="stylesheet" href="assets/css/flatpickr.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/all-fontawesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/magnific-popup.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/slimselect.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/flatpickr.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/style.css') }}" />
     
     
     
@@ -98,7 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--===== header ==========-->
     <main class="main">
         <!-- breadcrumb -->
-        <div class="site-breadcrumb ng-mt" style="background: url(assets/img/breadcrumb/01.jpg)">
+        <div class="site-breadcrumb ng-mt" style="background: url('{{ asset('vrinda-taxi/assets/img/breadcrumb/01.jpg') }}')">
             <div class="container">
                 <h3 class="breadcrumb-title">Contact Us</h3>
                 <ul class="breadcrumb-menu">
@@ -119,7 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="col-md-4">
                             <div class="contact-info h-100">
                                 <div class="icon">
-                                    <img src="assets/img/icon/address.svg" alt="" />
+                                    <img src="{{ asset('vrinda-taxi/assets/img/icon/address.svg') }}" alt="" />
                                 </div>
                                 <div class="content">
                                     <h4>Office Address</h4>
@@ -130,7 +130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="col-md-4">
                             <div class="contact-info h-100">
                                 <div class="icon">
-                                    <img src="assets/img/icon/call.svg" alt="" />
+                                    <img src="{{ asset('vrinda-taxi/assets/img/icon/call.svg') }}" alt="" />
                                 </div>
                                 <div class="content">
                                     <h4>Call Us</h4>
@@ -141,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="col-md-4">
                             <div class="contact-info h-100">
                                 <div class="icon">
-                                    <img src="assets/img/icon/email.svg" alt="" />
+                                    <img src="{{ asset('vrinda-taxi/assets/img/icon/email.svg') }}" alt="" />
                                 </div>
                                 <div class="content">
                                     <h4>Email Us</h4>
@@ -152,7 +152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <!-- <div class="col-md-3">
                 <div class="contact-info">
                   <div class="icon">
-                    <img src="assets/img/icon/clock.svg" alt="" />
+                    <img src="{{ asset('vrinda-taxi/assets/img/icon/clock.svg') }}" alt="" />
                   </div>
                   <div class="content">
                     <h4>Open Time</h4>
@@ -166,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="row g-4">
                         <div class="col-lg-5">
                             <div class="contact-img">
-                                <img src="assets/img/contact/01.jpg" alt="" />
+                                <img src="{{ asset('vrinda-taxi/assets/img/contact/01.jpg') }}" alt="" />
                             </div>
                         </div>
                         <div class="col-lg-7">
