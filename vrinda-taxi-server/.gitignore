@@ -1,24 +1,112 @@
-*.log
-.DS_Store
+# ==========================================
+# Laravel Framework
+# ==========================================
 .env
 .env.backup
 .env.production
-.phpactor.json
-.phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/auth.json
-/node_modules
+.env.*
+!.env.example
+
+/storage/*.key
+/storage/pail
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/app/*
+!/storage/app/.gitignore
+!/storage/app/public
+
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# Database & SQLite files
+database/*.sqlite
+database/*.sqlite-journal
+*.sqlite
+*.sqlite3
+*.db
+/vrinda_taxi
+
+# ==========================================
+# Node / NPM / Yarn
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm/
+.pnpm-store/
+.node_repl_history
+
+# ==========================================
+# Build Artifacts & Compiled Assets
+# ==========================================
 /public/build
 /public/hot
 /public/storage
-/storage/*.key
-/storage/pail
+dist/
+build/
+out/
+.vite/
+*.map
+
+# Compressed Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+assets.zip
+
+# ==========================================
+# Images & Media
+# ==========================================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
+*.bmp
+*.tiff
+*.avif
+public/uploads/
+uploads/
+
+# ==========================================
+# Composer & PHP
+# ==========================================
 /vendor
+vendor/
+composer.phar
+/auth.json
+.phpactor.json
+.phpunit.result.cache
+/.phpunit.cache
 Homestead.json
 Homestead.yaml
+
+# ==========================================
+# System & Editor Files
+# ==========================================
+*.log
+.DS_Store
 Thumbs.db
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+nbproject/
