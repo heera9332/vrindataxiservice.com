@@ -1,5 +1,463 @@
 <div class="sk-ww-google-reviews" data-embed-id="25660710"></div><script src="https://widgets.sociablekit.com/google-reviews/widget.js" defer></script>
  
+ 
+ 
+ <div class="car-destination pb-120">
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-7 mx-auto">
+                 <div class="site-heading text-center wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                     <span class="site-title-tagline"><i class="far fa-car"></i> Destination</span>
+                     <h3 class="site-title">Explore our popular <span>Vrindavan Taxi Services</span></h3>
+                     <div class="heading-divider"></div>
+                 </div>
+             </div>
+         </div>
+         <?php /*?><div class="row g-4">
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Book Cab Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="content">
+                         <span class="from-city">cab service in</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Local Taxi"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">vrindavan taxi </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">service</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Affordable Cab Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="content">
+                         <span class="from-city">Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">cab booking</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Tour Taxi"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="content">
+                         <span class="from-city">book cab in </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Outstation Taxi"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">taxi booking </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Cab Booking Online"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="content">
+                         <span class="from-city">vrindavan local </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">taxi</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Car Hire Service"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="content">
+                         <span class="from-city">vrindavan car </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">rental</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Best Taxi Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">best taxi service </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">in vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">best taxi service </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">in vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">best taxi service </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">in vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">best taxi service </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">in vrindavan</span>
+                     </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+         </div><?php */?>
+         
+         <div class="row g-4">
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Delhi</span>
+                     </div>
+                     <a href="vrindavan-to-delhi-taxi-service.php" class="theme-btn" title="Book Cab Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="content">
+                         <span class="from-city">Cab service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Dehradun</span>
+                     </div>
+                     <a href="vrindavan-to-dehradun-taxi-service.php" class="theme-btn" title="Vrindavan Local Taxi"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city"> Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Varanasi</span>
+                     </div>
+                     <a href="vrindavan-to-varanasi-taxi-service.php" class="theme-btn" title="Affordable Cab Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">UdaiPur</span>
+                     </div>
+                     <a href="vrindavan-to-udaipur-taxi-service.php" class="theme-btn" title="Vrindavan Tour Taxi"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Risikesh</span>
+                     </div>
+                     <a href="vrindavan-to-rishikesh-taxi-service.php" class="theme-btn" title="Vrindavan Outstation Taxi"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Shimla</span>
+                     </div>
+                     <a href="vrindavan-to-shimla-taxi-service.php" class="theme-btn" title="Vrindavan Cab Booking Online"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Noida</span>
+                     </div>
+                     <a href="vrindavan-to-noida-taxi-service.php" class="theme-btn" title="Vrindavan Car Hire Service"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Pushkar</span>
+                     </div>
+                     <a href="vrindavan-to-pushkar-taxi-service.php" class="theme-btn" title="Best Taxi Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Manali</span>
+                     </div>
+                     <a href="vrindavan-to-manali-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Mathura</span>
+                     </div>
+                     <a href="vrindavan-to-mathura-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan </span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Jaipur</span>
+                     </div>
+                     <a href="vrindavan-to-jaipur-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Lucknow</span>
+                     </div>
+                     <a href="vrindavan-to-lucknow-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Gurgaon</span>
+                     </div>
+                     <a href="vrindavan-to-gurgaon-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Haridwar</span>
+                     </div>
+                     <a href="vrindavan-to-haridwar-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Faridabad</span>
+                     </div>
+                     <a href="vrindavan-to-faridabad-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Crysta</span>
+                     </div>
+                     <a href="vrindavan-to-crysta-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Religious</span>
+                     </div>
+                     <a href="vrindavan-to-religious-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+            <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Braj Yatra</span>
+                     </div>
+                     <a href="vrindavan-to-braj-yatra-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Private Taxi</span>
+                     </div>
+                     <a href="vrindavan-to-private-taxi-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Parikrama</span>
+                     </div>
+                     <a href="vrindavan-to-parikrama-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Mandir Dham</span>
+                     </div>
+                     <a href="vrindavan-to-mandir-dham-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Local</span>
+                     </div>
+                     <a href="vrindavan-to-local-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Tourist</span>
+                     </div>
+                     <a href="vrindavan-to-tourist-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Jewar</span>
+                     </div>
+                     <a href="vrindavan-to-jewar-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Hathras</span>
+                     </div>
+                     <a href="vrindavan-to-hathras-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Etah</span>
+                     </div>
+                     <a href="vrindavan-to-etah-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Delhi Airport</span>
+                     </div>
+                     <a href="vrindavan-to-faridabad-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Faridabad</span>
+                     </div>
+                     <a href="vrindavan-to-faridabad-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+             <div class="col-md-6 col-lg-4">
+                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="content">
+                         <span class="from-city">Taxi Service in Vrindavan</span>
+                         <i class="fas fa-long-arrow-right"></i>
+                         <span class="to-city">Ajmer</span>
+                     </div>
+                     <a href="vrindavan-to-ajmer-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                 </div>
+             </div>
+             
+                  
+         </div>
+         
+     </div>
+ </div>
  <!-- footer area -->
  <footer class="footer-area footer-2 pb-40">
      <div class="footer-shape">
@@ -13,8 +471,8 @@
 
                      <div class="col-lg-4">
                          <div class="footer-widget-box about-us">
-                             <a href="/" class="footer-logo">
-                                 <img src="assets/img/logo/logo.png" alt="Vrinda Taxi Service" />
+                             <a href="#" class="footer-logo">
+                                 <img src="assets/img/logo/logo.png" alt="" />
                              </a>
                              <p>
                                  Company Name: Vrinda Taxi Service<br>
@@ -36,50 +494,67 @@
                                      <div class="payment-img">
                                          <img class="visa" src="assets/img/payment/3.png" alt="" />
                                      </div>
+                                     <!-- <div class="payment-img">
+                        <img class="google" src="assets/img/payment/google-pay.png" alt="" />
+                      </div>
+                      <div class="payment-img">
+                        <img class="amex" src="assets/img/payment/american-express.png" alt="" />
+                      </div>
+                      <div class="payment-img">
+                        <img class="discover" src="assets/img/payment/discover.png" alt="" />
+                      </div> -->
                                  </div>
                              </div>
                          </div>
                      </div>
                      <div class="col-lg-2">
                          <div class="footer-widget-box list">
-                             <h4 class="footer-widget-title">Quick Links</h4>
+                             <h4 class="footer-widget-title">Company</h4>
                              <ul class="footer-list">
                                  <li>
-                                     <a href="/"><i class="far fa-angle-double-right"></i>Home</a>
+                                     <a href="#"><i class="far fa-angle-double-right"></i>Home</a>
                                  </li>
                                  <li>
-                                     <a href="/about"><i class="far fa-angle-double-right"></i>About Us</a>
+                                     <a href="#"><i class="far fa-angle-double-right"></i>About Us</a>
                                  </li>
                                  <li>
-                                     <a href="/package"><i class="far fa-angle-double-right"></i>Tour Packages</a>
+                                     <a href="#"><i class="far fa-angle-double-right"></i>Package</a>
                                  </li>
                                  <li>
-                                    <a href="#footerServices" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="footerServices" class="d-flex align-items-center justify-content-between">
-                                        <span><i class="far fa-angle-double-right"></i>Services</span>
-                                        <i class="fas fa-angle-down zero-opacity-on-open style-arrow" style="font-size: 11px; margin-left: 5px;"></i>
-                                    </a>
-                                    
-                                    <ul class="collapse list-unstyled ps-3 mt-1" id="footerServices">
-                                        <li class="mb-1">
-                                            <a href="/airport-taxi" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Airport Taxi</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="/outstation-taxi" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Outstation Taxi</a>
-                                        </li>
-                                        <li>
-                                            <a href="/vrindavan-sightseeing" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Sightseeing</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                     <a href="#"><i class="far fa-angle-double-right"></i>Why Us</a>
+                                 </li>
                                  <li>
-                                     <a href="/contact"><i class="far fa-angle-double-right"></i>Contact Us</a>
+                                     <a href="#"><i class="far fa-angle-double-right"></i>Gallery</a>
+                                 </li>
+                                 <li>
+                                     <a href="#"><i class="far fa-angle-double-right"></i>Contact Us</a>
                                  </li>
                              </ul>
                          </div>
                      </div>
                      <div class="col-lg-3">
                          <div class="footer-widget-box list">
-                             <h4 class="footer-widget-title">Our Location</h4>
+                             <h4 class="footer-widget-title">Map</h4>
+                             <!-- <ul class="footer-list">
+                    <li>
+                      <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Divine Experience</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan & Barsana Yatra</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="far fa-angle-double-right"></i>Braj Bhoomi Spiritual Journey</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="far fa-angle-double-right"></i>Krishna Leela Path Yatra</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="far fa-angle-double-right"></i>Complete Braj Darshan</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="far fa-angle-double-right"></i>The Hidden Vrindavan Yatra</a>
+                    </li>
+                  </ul> -->
                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.899276004841!2d77.6331019!3d27.565636299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736dcb5cc1efd5%3A0x3b032bac4c841569!2sVrinda%20Taxi%20Service%20-%20Best%20Taxi%20%26%20Cab%20Service%20in%20Vrindavan%20%7C%20Local%20%26%20Outstation%20Car%20Rental%20Services!5e0!3m2!1sen!2sin!4v1771939850786!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                          </div>
                      </div>
@@ -102,7 +577,7 @@
                                      </div>
                                      <div class="content">
                                          <h5>Call Us</h5>
-                                         <a href="tel:+919452667708">+91 9452667708</a>
+                                         <a href="tel:+91 9452667708">+91 9452667708</a>
                                      </div>
                                  </li>
                                  <li>
@@ -125,7 +600,7 @@
          <div class="copyright">
              <div class="row">
                  <div class="col-md-8 align-self-center">
-                     <p class="copyright-text">&copy; Copyright <span id="date"></span> <a href="https://www.vrindavandigitalmarketing.com/" target="_blank"> Vrinda Taxi Service All Rights Reserved. Design By Vrindavan Digital Marketing</a> </p>
+                     <p class="copyright-text">&copy; Copyright <span id="date"></span> <a href="https://www.sitedigitalmarket.com/" target="_blank"> Vrinda Taxi Service All Rights Reserved. Design By Site Digital Market</a> </p>
                  </div>
                  <div class="col-md-4 align-self-center">
                      <ul class="footer-social">
@@ -220,4 +695,4 @@ document.addEventListener("keydown", function (e) {
         e.preventDefault();
     }
 });
-</script>
+</script> 
