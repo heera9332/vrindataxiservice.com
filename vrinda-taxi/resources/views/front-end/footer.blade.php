@@ -1,5 +1,3 @@
-<div class="sk-ww-google-reviews" data-embed-id="25660710"></div><script src="https://widgets.sociablekit.com/google-reviews/widget.js" defer></script>
- 
  
  
  <div class="car-destination pb-120">
