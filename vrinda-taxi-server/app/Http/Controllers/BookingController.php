@@ -169,6 +169,20 @@ class BookingController extends Controller
    
     public function taxiService($slug)
     {
+        if (str_ends_with($slug, '.php')) {
+            $cleanSlug = substr($slug, 0, -4);
+            if ($cleanSlug === 'about') {
+                return redirect()->route('about', [], 301);
+            }
+            if ($cleanSlug === 'contact') {
+                return redirect()->route('contact', [], 301);
+            }
+            if ($cleanSlug === 'package') {
+                return redirect()->route('package', [], 301);
+            }
+            return redirect('/' . $cleanSlug, 301);
+        }
+
         return view('front-end.taxi-service', compact('slug'));
     }
 

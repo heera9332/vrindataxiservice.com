@@ -178,13 +178,13 @@
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About</a></li>
 
 
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="package.php">Package</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('package') }}">Package</a></li>
 
                                 <li class="nav-item dropdown">
 
@@ -304,7 +304,7 @@
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
 
 
 
@@ -329,7 +329,7 @@
 
                                 <div class="nav-btn">
 
-                                    <a href="contact.php" class="theme-btn"><span class="far fa-car"></span> Book A Car</a>
+                                    <a href="{{ route('contact') }}" class="theme-btn"><span class="far fa-car"></span> Book A Car</a>
 
                                 </div>
 

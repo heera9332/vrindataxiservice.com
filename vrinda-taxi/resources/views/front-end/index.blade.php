@@ -554,7 +554,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
                             </div>
-                            <a href="about.php" class="theme-btn">Discover More<i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('about') }}" class="theme-btn">Discover More<i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -777,7 +777,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">2 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">2 Days Mathura Vrindavan Tour</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">2 Days Mathura Vrindavan Tour</a></h5>
                                 <p class="text-muted">Ideal short pilgrimage covering major temples.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Mathura & Vrindavan Darshan</li>
@@ -800,7 +800,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">3 Days Mathura Bharatpur Tour</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">3 Days Mathura Bharatpur Tour</a></h5>
                                 <p class="text-muted">Pilgrimage with heritage & nature experience.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Mathura & Bharatpur</li>
@@ -823,7 +823,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Premanand Ji Maharaj Darshan Tour</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Premanand Ji Maharaj Darshan Tour</a></h5>
                                 <p class="text-muted">Spiritual journey with peaceful darshan.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Temple Darshan</li>
@@ -843,7 +843,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="card h-100 shadow-sm border-0">
                             <img src="{{ asset('vrinda-taxi/assets/img/package/p4.webp') }}" class="card-img-top" alt="">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Braj 84 Kos Yatra Short Tour</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Braj 84 Kos Yatra Short Tour</a></h5>
                                 <p class="text-muted">Sacred Braj Bhoomi pilgrimage circuit.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Govardhan Parikrama</li>
@@ -866,7 +866,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">1 Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Full Day Mathura Vrindavan</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Full Day Mathura Vrindavan</a></h5>
                                 <p class="text-muted">Complete darshan in one day.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>All Major Temples</li>
@@ -889,7 +889,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Same Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Same Day Mathura Vrindavan Tour from Delhi</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Same Day Mathura Vrindavan Tour from Delhi</a></h5>
                                 <p class="text-muted">Perfect for weekend or short trips.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Delhi Pickup</li>
@@ -913,7 +913,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="agra.php">Mathura Vrindavan Tour with Agra</a></h5>
+                                <h5 class="fw-bold"><a href="/agra">Mathura Vrindavan Tour with Agra</a></h5>
                                 <p class="text-muted">Pilgrimage with Taj Mahal visit.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Temples + Taj Mahal</li>
@@ -936,7 +936,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Mathura Vrindavan Barsana Nandgaon Tour</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Mathura Vrindavan Barsana Nandgaon Tour</a></h5>
                                 <p class="text-muted">Visit Radha Rani & Nand Baba temples.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Barsana</li>
@@ -960,7 +960,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Mathura Vrindavan Tour with Gokul</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Mathura Vrindavan Tour with Gokul</a></h5>
                                 <p class="text-muted">Explore Lord Krishnaâ€™s childhood place.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Gokul Visit</li>
@@ -983,7 +983,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Festival</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Mathura Vrindavan Holi Tour with Gokul & Govardhan</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Mathura Vrindavan Holi Tour with Gokul & Govardhan</a></h5>
                                 <p class="text-muted">Celebrate world-famous Braj Holi.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Holi Events</li>
@@ -1006,7 +1006,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Mathura Vrindavan Tour with Ayodhya & Varanasi</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Mathura Vrindavan Tour with Ayodhya & Varanasi</a></h5>
                                 <p class="text-muted">Extended spiritual journey.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Ram Mandir</li>
@@ -1029,7 +1029,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold"><a href="mathura.php">Mathura Vrindavan Tour with Haridwar & Rishikesh</a></h5>
+                                <h5 class="fw-bold"><a href="/mathura">Mathura Vrindavan Tour with Haridwar & Rishikesh</a></h5>
                                 <p class="text-muted">Pilgrimage with Ganga & yoga city.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Ganga Aarti</li>
@@ -1357,7 +1357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <p>
                                     Planning a group trip, wedding travel, religious tour or long-term rental? Contact us for customized packages at the best price.
                                 </p>
-                                <a href="contact.php" class="theme-btn">Contact Us<i class="fas fa-arrow-right"></i></a>
+                                <a href="{{ route('contact') }}" class="theme-btn">Contact Us<i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

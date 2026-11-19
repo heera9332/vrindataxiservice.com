@@ -139,19 +139,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <h3 class="breadcrumb-title">
                     @php
+                        $slugClean = str_replace('-', ' ', $slug);
                         $slugParts = explode('-to-', $slug);
-                        // Agar index 1 exist karta hai toh wo le, nahi toh empty string ya default value set karein
-                        $to = isset($slugParts[1]) ? $slugParts[1] : 'default-destination'; 
+                        if (isset($slugParts[1])) {
+                            $from = ucwords(str_replace('-', ' ', $slugParts[0]));
+                            $to = ucwords(str_replace('-', ' ', $slugParts[1]));
+                            $pageHeading = $from . ' to ' . $to . ' Taxi Service';
+                            $destinationName = $to;
+                        } else {
+                            $destinationName = ucwords($slugClean);
+                            $pageHeading = $destinationName . ' Taxi Service';
+                        }
                     @endphp
 
-                   {{ ucfirst($to) }} Tour
+                   {{ $pageHeading }}
                 </h3>
 
                 <ul class="breadcrumb-menu">
 
                     <li><a href="/">Home</a></li>
 
-                    <li class="active"> {{ ucfirst($to) }}</li>
+                    <li class="active"> {{ $destinationName }}</li>
 
                 </ul>
 
@@ -168,124 +176,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="col-xl-4 col-lg-4">
                             <div class="service-sidebar">
                                 <div class="widget">
-                                    <h4 class="title">All Services</h4>
+                                    <h4 class="title">Popular Services</h4>
                                     <div class="category">
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Taxi Service in Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Cab Service in Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Taxi Service</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Cab Booking</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Book Cab in Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Taxi Booking Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Local Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Car Rental</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Best Taxi Service in Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Best Cab Service in Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Cheap Taxi in Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Affordable Cab Vrindavan</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Travel Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Tour Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Sightseeing Cab</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Outstation Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Airport Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Railway Station Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Taxi Near Me</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Cab Near Me</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Taxi Booking Online</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Cab Service 24x7</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Taxi Phone Number</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Taxi Contact</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Car Hire Service</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Private Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Tempo Traveller</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan SUV Taxi</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Sedan Cab</a>
-                                        <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Taxi for Tourists</a>
+                                        <a href="/vrindavan-sightseeing"><i class="far fa-angle-double-right"></i>Vrindavan Local Sightseeing</a>
+                                        <a href="/mathura"><i class="far fa-angle-double-right"></i>Mathura & Vrindavan Darshan</a>
+                                        <a href="/outstation-taxi"><i class="far fa-angle-double-right"></i>Outstation Taxi Service</a>
+                                        <a href="/airport-taxi"><i class="far fa-angle-double-right"></i>Delhi Airport Pick & Drop</a>
+                                        <a href="/package"><i class="far fa-angle-double-right"></i>Braj Dham Tour Packages</a>
+                                        <a href="/khatoo-shyam"><i class="far fa-angle-double-right"></i>Khatu Shyam Ji Taxi</a>
+                                        <a href="/vrindavan-to-rishikesh-taxi-service"><i class="far fa-angle-double-right"></i>Rishikesh & Haridwar Tour</a>
+                                        <a href="{{ route('about') }}"><i class="far fa-angle-double-right"></i>About Vrinda Taxi Service</a>
+                                        <a href="{{ route('contact') }}"><i class="far fa-angle-double-right"></i>Contact & Quick Booking</a>
                                     </div>
                                 </div>
-                                <!-- <div class="widget">
-                    <h4 class="title">Download</h4>
-                    <div class="service-download">
-                      <a href="#"><i class="far fa-file-pdf"></i> Download Brochure</a>
-                      <a href="#"><i class="far fa-file-alt"></i> Download Application</a>
-                    </div>
-                  </div> -->
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-8">
 <div class="service-details">
 <div class="content">
 
-<h3 class="blog-details-title mb-3">Reliable {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi Service – Vrinda Taxi Service</h3>
+<h3 class="blog-details-title mb-3">Reliable {{ $pageHeading }} – Vrinda Taxi Service</h3>
 
-<p>Traveling from {{ ucwords(str_replace('-', ' ', $slug)) }} has never been easier and more comfortable than with Vrinda Taxi Service. Whether it's for a family trip, business travel, or a solo journey, our professional taxi services provide a seamless and safe experience for every traveler. Our priority is ensuring that your journey from {{ ucwords(str_replace('-', ' ', $slug)) }} is not only comfortable but also affordable.</p>
+<p>Traveling to and from {{ $destinationName }} has never been easier and more comfortable than with Vrinda Taxi Service. Whether it's for a sacred pilgrimage, family tour, outstation journey, or business travel, our professional taxi services provide a seamless and safe experience for every traveler. Our priority is ensuring that your journey to {{ $destinationName }} is comfortable, punctual, and affordable.</p>
 
-<h4 class="mb-3">Why Choose Vrinda Taxi Service for {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi</h4>
+<h4 class="mb-3">Why Choose Vrinda Taxi Service for {{ $destinationName }}</h4>
 
-<p>At Vrinda Taxi Service, we understand the importance of reliable transportation. Our team is committed to providing the best travel experience with:</p>
+<p>At Vrinda Taxi Service, we understand the importance of dependable, courteous transportation. Our team is committed to providing the best travel experience with:</p>
 
 <ul>
-<li><strong>Professional Drivers:</strong> All our drivers are trained, experienced, and well-acquainted with the routes from {{ ucwords(str_replace('-', ' ', $slug)) }}. They prioritize safety and punctuality.</li>
-<li><strong>Well-Maintained Fleet:</strong> Our cars are regularly serviced, clean, and equipped with modern amenities to ensure a smooth ride.</li>
-<li><strong>Affordable Rates:</strong> We provide transparent pricing with no hidden charges.</li>
-<li><strong>24/7 Customer Support:</strong> Our support team is always available at <strong>+91 9452667708</strong> or via email at <strong>help@vrindataxiservice.com</strong>.</li>
+<li><strong>Professional Local Drivers:</strong> All our drivers are verified, polite, and well-acquainted with the routes, highway conditions, and local landmarks in and around {{ $destinationName }}.</li>
+<li><strong>Well-Maintained Fleet:</strong> Our cars are regularly serviced, thoroughly cleaned, and air-conditioned to ensure a smooth, fatigue-free ride.</li>
+<li><strong>Affordable & Honest Pricing:</strong> Transparent rates with no hidden surprises or extra charges.</li>
+<li><strong>24/7 Customer Support:</strong> Our dedicated support team is always available at <strong>+91 9452667708</strong> or via email at <strong>help@vrindataxiservice.com</strong>.</li>
 </ul>
 
-<h4 class="mt-4">Comfortable and Safe Travel</h4>
+<h4 class="mt-4">Comfortable and Safe Pilgrimage & Tour Travel</h4>
 
-<p>Traveling long distances can be tiring, but with Vrinda Taxi Service, comfort comes standard. Our cars are spacious, air-conditioned, and well-equipped for long journeys. Whether you are traveling with family, friends, or colleagues, our taxis ensure a pleasant and stress-free journey.</p>
+<p>Long journeys and temple visits can be tiring, but with Vrinda Taxi Service, comfort comes standard. Our fleet includes spacious sedans, SUVs, and tempo travellers equipped with modern amenities. Whether you are traveling with family, senior citizens, or friends, our cabs ensure a peaceful and enjoyable trip.</p>
 
-<p>Safety is another key aspect we emphasize. Our vehicles are equipped with safety features, and our drivers follow all traffic regulations strictly. Your peace of mind is our responsibility, and we ensure a safe ride from {{ ucwords(str_replace('-', ' ', $slug)) }}.</p>
+<p>Safety is our highest priority. All vehicles adhere to rigorous maintenance standards, and our drivers follow safe driving practices so you can travel with complete peace of mind.</p>
 
 <h4 class="mt-4">Services We Offer</h4>
 
 <ul>
-<li><strong>{{ ucwords(str_replace('-', ' ', $slug)) }} Taxi:</strong> Ideal for one-way or round trips for sightseeing, business, or personal travel.</li>
-<li><strong>Local Tours in Vrindavan:</strong> Explore famous temples, markets, and attractions with our local cab services.</li>
-<li><strong>Airport Transfers:</strong> Reliable taxi service for transfers to Delhi or nearby airports.</li>
-<li><strong>Outstation Travel:</strong> Travel beyond Dehradun to hill stations, pilgrimage destinations, and nearby cities.</li>
-<li><strong>Hourly Rentals:</strong> Flexible taxi rentals to explore destinations at your own pace.</li>
+<li><strong>{{ $pageHeading }}:</strong> Flexible one-way drops, round trips, and multi-day packages.</li>
+<li><strong>Local Sightseeing & Darshan:</strong> Explore iconic temples, sacred ghats, and historical landmarks.</li>
+<li><strong>Delhi Airport & Railway Transfers:</strong> Punctual pickups and drops for IGI Airport and major railway stations.</li>
+<li><strong>Outstation Pilgrimage Tours:</strong> Travel across Braj Dham (Vrindavan, Mathura, Govardhan, Barsana, Nandgaon, Gokul) and beyond.</li>
+<li><strong>Custom Tour Packages:</strong> Tailored itineraries suited to your timing and budget.</li>
 </ul>
 
-<h4 class="mt-4">Affordable {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi Charges</h4>
+<h4 class="mt-4">Transparent & Affordable Taxi Charges</h4>
 
-<p>Our <strong>{{ ucwords(str_replace('-', ' ', $slug)) }} taxi services</strong> are priced competitively to provide value without compromising comfort or safety. Charges depend on the vehicle type, distance, and services selected, but we always maintain transparent pricing with no hidden fees.</p>
+<p>Our <strong>{{ $pageHeading }}</strong> packages are priced competitively to deliver the highest value without compromising comfort, safety, or reliability. Request a customized instant quote by calling <strong>+91 9452667708</strong> or messaging us on WhatsApp.</p>
 
-<p>You can request a free quote by calling <strong>+91 9452667708</strong> or emailing <strong>help@vrindataxiservice.com</strong>.</p>
-
-<h4 class="mt-4">Fleet of Vehicles</h4>
+<h4 class="mt-4">Our Vehicle Fleet Options</h4>
 
 <ul>
-<li><strong>Sedans:</strong> Perfect for solo travelers or couples.</li>
-<li><strong>SUVs and MUVs:</strong> Spacious vehicles for families or groups.</li>
-<li><strong>Luxury Cars:</strong> Ideal for business travelers who prefer premium comfort.</li>
-<li><strong>Tempo Travellers and Mini Buses:</strong> Suitable for larger groups and pilgrimage tours.</li>
+<li><strong>Sedans (Swift Dzire, Etios):</strong> Budget-friendly choice for solo travelers, couples, or small families (up to 4 passengers).</li>
+<li><strong>SUVs & MUVs (Ertiga, Innova, Innova Crysta):</strong> Spacious, premium comfort with ample luggage space for families (6-7 passengers).</li>
+<li><strong>Tempo Travellers:</strong> 12 to 26 seater luxury vehicles for large pilgrim groups and family gatherings.</li>
 </ul>
 
-<h4 class="mt-4">Booking Your {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi</h4>
+<h4 class="mt-4">Explore {{ $destinationName }} with Peace of Mind</h4>
 
-<p>Booking your taxi with Vrinda Taxi Service is simple and hassle-free. Visit our website <strong>https://vrindataxiservice.com</strong> or call us directly at <strong>+91 9452667708</strong> to book your ride.</p>
+<p>{{ $destinationName }} is known for its remarkable cultural heritage, spiritual significance, and scenic attractions. With Vrinda Taxi Service, you get more than just a ride — our knowledgeable drivers guide you along the best routes so you can make the most of your journey.</p>
 
-<p>Provide your travel date, vehicle preference, and special requirements, and our team will confirm your booking quickly.</p>
+<h4 class="mt-4">Book Your {{ $destinationName }} Taxi Today</h4>
 
-<h4 class="mt-4">Customer Satisfaction is Our Priority</h4>
-
-<p>Over the years, Vrinda Taxi Service has built a strong reputation for reliability, comfort, and affordability. Many travelers choose our <strong>{{ ucwords(str_replace('-', ' ', $slug)) }} taxi service</strong> because we provide a travel experience that is safe, convenient, and memorable.</p>
-
-<h4 class="mt-4">Explore Dehradun and Beyond</h4>
-
-<p>Dehradun, the capital city of Uttarakhand, is known for its scenic beauty, historical sites, and peaceful surroundings. Popular attractions include Robber's Cave, Sahastradhara, and nearby hill stations.</p>
-
-<p>With Vrinda Taxi Service, you can plan multi-stop trips or extended tours comfortably while our experienced drivers guide you through the best routes and attractions.</p>
-
-<h4 class="mt-4">Why Our Customers Trust Us</h4>
-
-<ul>
-<li>Punctual pickups and drop-offs</li>
-<li>Professional and courteous drivers</li>
-<li>Reliable long-distance travel service</li>
-<li>24/7 customer support</li>
-</ul>
-<p>Book your taxi today and enjoy a comfortable journey from <strong>{{ ucwords(str_replace('-', ' ', $slug)) }}</strong> with Vrinda Taxi Service.</p>
+<p>Booking with Vrinda Taxi Service is quick and straightforward. Visit our website or call us directly at <strong>+91 9452667708</strong> to reserve your cab. Enjoy a hassle-free, comfortable ride with Vrinda Taxi Service.</p>
 
 </div>
 </div>

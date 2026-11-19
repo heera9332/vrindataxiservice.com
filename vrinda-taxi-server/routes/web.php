@@ -22,6 +22,15 @@ Route::get('/vrindavan-sightseeing', function () {return view('front-end.vrindav
 Route::get('/package', function () {return view('front-end.package'); })->name('package');
 Route::get('/vrindavan-to-rishikesh-taxi-service', function () {return view('front-end.vrindavan-to-rishikesh-taxi-service'); });
 
+// 301 Permanent Redirects for legacy .php URLs
+Route::redirect('/about.php', '/about', 301);
+Route::redirect('/contact.php', '/contact', 301);
+Route::redirect('/package.php', '/package', 301);
+Route::redirect('/airport-taxi.php', '/airport-taxi', 301);
+Route::redirect('/outstation-taxi.php', '/outstation-taxi', 301);
+Route::redirect('/vrindavan-sightseeing.php', '/vrindavan-sightseeing', 301);
+Route::redirect('/index.php', '/', 301);
+
 Route::get('/{slug}', [BookingController::class, 'taxiService'])->name('taxi.service');
 
 
