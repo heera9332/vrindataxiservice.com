@@ -1,2 +1,20 @@
+# Robots.txt for Vrinda Taxi Service
+# Website: https://vrindataxiservice.com
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Private and administrative routes
+Disallow: /admin/
+Disallow: /booking/success/
+Disallow: /booking/*/whatsapp
+Disallow: /storage/logs/
+
+# Disallow legacy .php endpoints to prevent duplicate content indexing
+Disallow: /*.php$
+
+# Sitemaps
+Sitemap: https://vrindataxiservice.com/sitemap.xml
+
+# LLM Context File
+# See: https://vrindataxiservice.com/llms.txt

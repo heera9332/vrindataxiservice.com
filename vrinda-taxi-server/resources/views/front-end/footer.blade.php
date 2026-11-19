@@ -74,6 +74,9 @@
                                  <li>
                                      <a href="{{ route('contact') }}"><i class="far fa-angle-double-right"></i>Contact Us</a>
                                  </li>
+                                 <li>
+                                     <a href="/sitemap.xml"><i class="far fa-angle-double-right"></i>Sitemap</a>
+                                 </li>
 
                                  
                              </ul>

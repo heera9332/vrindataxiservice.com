@@ -169,6 +169,13 @@ class BookingController extends Controller
    
     public function taxiService($slug)
     {
+        if (in_array($slug, ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt'])) {
+            return redirect('/' . $slug, 301);
+        }
+        if ($slug === 'sitemap') {
+            return redirect('/sitemap.xml', 301);
+        }
+
         if (str_ends_with($slug, '.php')) {
             $cleanSlug = substr($slug, 0, -4);
             if ($cleanSlug === 'about') {
