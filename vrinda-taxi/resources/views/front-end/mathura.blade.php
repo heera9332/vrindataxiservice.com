@@ -355,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!--======== footer =========-->
 
-    <?php include("footer.php"); ?>
+    @include('front-end.layouts.footer')
 
     <!--======== footer =========-->
 

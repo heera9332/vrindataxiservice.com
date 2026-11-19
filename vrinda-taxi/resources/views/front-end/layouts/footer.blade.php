@@ -1,427 +1,3 @@
- 
- 
- 
- <div class="car-destination pb-120">
-     <div class="container">
-         <div class="row">
-             <div class="col-lg-7 mx-auto">
-                 <div class="site-heading text-center wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                     <span class="site-title-tagline"><i class="far fa-car"></i> Destination</span>
-                     <h3 class="site-title">Explore our popular <span>Vrindavan Taxi Services</span></h3>
-                     <div class="heading-divider"></div>
-                 </div>
-             </div>
-         </div>
-       
-         
-         <div class="row g-4">
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-delhi']) }}">
-
-                                <span class="from-city">Taxi Service in Vrindavan</span>
-                                <i class="fas fa-long-arrow-right"></i>
-                                <span class="to-city">Delhi</span>
-                        </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Book Cab Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
-                     <div class="content">
-                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-dehradun']) }}">
-
-                         <span class="from-city">Cab service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Dehradun</span> 
-                      </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Local Taxi"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Varanasi']) }}">
-
-                         <span class="from-city"> Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Varanasi</span>
-                         </a>
-                       </div>
-                      
-                     <a href="#" class="theme-btn" title="Affordable Cab Vrindavan"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-UdaiPur']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">UdaiPur</span>
-                        </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Tour Taxi"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Risikesh']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan </span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Risikesh</span>
-                        </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Outstation Taxi"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Shimla']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan </span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Shimla</span>
-                         </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Cab Booking Online"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
-                     <div class="content">
-                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Noida']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan </span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Noida</span>
-                      </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Car Hire Service"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
-                     <div class="content">
-                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Pushkar']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Pushkar</span>
-                       </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Best Taxi Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Manali']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Manali</span>
-                       </a>
-                        </div>
-
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Mathura']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Mathura</span>
-                        </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Jaipur']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan </span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Jaipur</span>
-                        </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Lucknow']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Lucknow</span>
-                    </a>
-                        </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Gurgaon']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Gurgaon</span>
-                         </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Haridwar']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Haridwar</span>
-                       </a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Faridabad']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Faridabad</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                                                <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Crysta']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Crysta</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Religious']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Religious</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-            <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Braj-Yatra']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Braj Yatra</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Private-Taxi']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Private Taxi</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                       <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Parikrama']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Parikrama</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Mandir-Dham']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Mandir Dham</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Local']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Local</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Tourist']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Tourist</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Jewar']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Jewar</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Hathras']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Hathras</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Etah']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Etah</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Delhi-Airport']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Delhi Airport</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Faridabad']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Faridabad</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-             <div class="col-md-6 col-lg-4">
-                 <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
-                     <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Ajmer']) }}">
-
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Ajmer</span>
-</a>
-                     </div>
-                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
-                 </div>
-             </div>
-             
-                  
-         </div>
-         
-     </div>
- </div>
  <!-- footer area -->
  <footer class="footer-area footer-2 pb-40">
      <div class="footer-shape">
@@ -435,8 +11,8 @@
 
                      <div class="col-lg-4">
                          <div class="footer-widget-box about-us">
-                             <a href="#" class="footer-logo">
-                                 <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="" />
+                             <a href="/" class="footer-logo">
+                                 <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="Vrinda Taxi Service" />
                              </a>
                              <p>
                                  Company Name: Vrinda Taxi Service<br>
@@ -458,37 +34,22 @@
                                      <div class="payment-img">
                                          <img class="visa" src="{{ asset('vrinda-taxi/assets/img/payment/3.png') }}" alt="" />
                                      </div>
-                                     <!-- <div class="payment-img">
-                        <img class="google" src="{{ asset('vrinda-taxi/assets/img/payment/google-pay.png') }}" alt="" />
-                      </div>
-                      <div class="payment-img">
-                        <img class="amex" src="{{ asset('vrinda-taxi/assets/img/payment/american-express.png') }}" alt="" />
-                      </div>
-                      <div class="payment-img">
-                        <img class="discover" src="{{ asset('vrinda-taxi/assets/img/payment/discover.png') }}" alt="" />
-                      </div> -->
                                  </div>
                              </div>
                          </div>
                      </div>
                      <div class="col-lg-2">
                          <div class="footer-widget-box list">
-                             <h4 class="footer-widget-title">Company</h4>
+                             <h4 class="footer-widget-title">Quick Links</h4>
                              <ul class="footer-list">
                                  <li>
-                                     <a href="#"><i class="far fa-angle-double-right"></i>Home</a>
+                                     <a href="/"><i class="far fa-angle-double-right"></i>Home</a>
                                  </li>
                                  <li>
-                                     <a href="#"><i class="far fa-angle-double-right"></i>About Us</a>
+                                     <a href="{{ route('about') }}"><i class="far fa-angle-double-right"></i>About Us</a>
                                  </li>
                                  <li>
-                                     <a href="#"><i class="far fa-angle-double-right"></i>Package</a>
-                                 </li>
-                                 <li>
-                                     <a href="#"><i class="far fa-angle-double-right"></i>Why Us</a>
-                                 </li>
-                                 <li>
-                                     <a href="#"><i class="far fa-angle-double-right"></i>Gallery</a>
+                                     <a href="{{ route('package') }}"><i class="far fa-angle-double-right"></i>Tour Packages</a>
                                  </li>
 
                                  <li>
@@ -511,7 +72,7 @@
                                 </li>
                                 
                                  <li>
-                                     <a href="/contact"><i class="far fa-angle-double-right"></i>Contact Us</a>
+                                     <a href="{{ route('contact') }}"><i class="far fa-angle-double-right"></i>Contact Us</a>
                                  </li>
 
                                  
@@ -520,27 +81,7 @@
                      </div>
                      <div class="col-lg-3">
                          <div class="footer-widget-box list">
-                             <h4 class="footer-widget-title">Map</h4>
-                             <!-- <ul class="footer-list">
-                    <li>
-                      <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan Divine Experience</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="far fa-angle-double-right"></i>Vrindavan & Barsana Yatra</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="far fa-angle-double-right"></i>Braj Bhoomi Spiritual Journey</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="far fa-angle-double-right"></i>Krishna Leela Path Yatra</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="far fa-angle-double-right"></i>Complete Braj Darshan</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="far fa-angle-double-right"></i>The Hidden Vrindavan Yatra</a>
-                    </li>
-                  </ul> -->
+                             <h4 class="footer-widget-title">Our Location</h4>
                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.899276004841!2d77.6331019!3d27.565636299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736dcb5cc1efd5%3A0x3b032bac4c841569!2sVrinda%20Taxi%20Service%20-%20Best%20Taxi%20%26%20Cab%20Service%20in%20Vrindavan%20%7C%20Local%20%26%20Outstation%20Car%20Rental%20Services!5e0!3m2!1sen!2sin!4v1771939850786!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                          </div>
                      </div>
@@ -563,7 +104,7 @@
                                      </div>
                                      <div class="content">
                                          <h5>Call Us</h5>
-                                         <a href="tel:+91 9452667708">+91 9452667708</a>
+                                         <a href="tel:+919452667708">+91 9452667708</a>
                                      </div>
                                  </li>
                                  <li>
@@ -681,4 +222,4 @@ document.addEventListener("keydown", function (e) {
         e.preventDefault();
     }
 });
-</script> 
+</script>
