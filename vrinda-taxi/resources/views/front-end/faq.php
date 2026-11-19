@@ -13,17 +13,17 @@
     <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="vrinda-taxi/assets/img/logo/favicon.png" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/slimselect.min.css" />
-    <link rel="stylesheet" href="assets/css/flatpickr.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/all-fontawesome.min.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/slimselect.min.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="vrinda-taxi/assets/css/style.css" />
 </head>
 
 <body>
@@ -35,7 +35,7 @@
     <!--===== header ==========-->
     <main class="main">
         <!-- breadcrumb -->
-        <div class="site-breadcrumb ng-mt" style="background: url(assets/img/breadcrumb/01.jpg)">
+        <div class="site-breadcrumb ng-mt" style="background: url(vrinda-taxi/assets/img/breadcrumb/01.jpg)">
             <div class="container">
                 <h3 class="breadcrumb-title">Faq</h3>
                 <ul class="breadcrumb-menu">
@@ -62,7 +62,7 @@
                   </p> -->
                             </div>
                             <div class="faq-img wow fadeInUp" data-wow-delay=".2s">
-                                <img src="assets/img/car/01.png" alt="" />
+                                <img src="vrinda-taxi/assets/img/car/01.png" alt="" />
                             </div>
                         </div>
                     </div>

@@ -28,27 +28,27 @@
 
     <!-- favicon -->
 
-    <link rel="icon" type="image/x-icon" href="{{ asset(\'vrinda-taxi/assets/img/logo/favicon.png\') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />
 
 
 
     <!-- css -->
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/bootstrap.min.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/bootstrap.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/all-fontawesome.min.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/all-fontawesome.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/animate.min.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/animate.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/magnific-popup.min.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/magnific-popup.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/owl.carousel.min.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/owl.carousel.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/slimselect.min.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/slimselect.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/flatpickr.min.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/flatpickr.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset(\'vrinda-taxi/assets/css/style.css\') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/style.css') }}" />
     
     
     
@@ -204,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="col-xl-8 col-lg-8">
                             <div class="service-details">
                                 <div class="mb-30">
-                                    <img src="{{ asset(\'vrinda-taxi/assets/img/package/khatu.jpg\') }}" alt="thumb">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/package/khatu.jpg') }}" alt="thumb">
                                 </div>
                                 <div class="content">
 

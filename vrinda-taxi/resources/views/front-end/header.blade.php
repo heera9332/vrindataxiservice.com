@@ -126,7 +126,7 @@
 
                     <a class="navbar-brand" href="/">
 
-                        <img src="{{ asset(\'vrinda-taxi/assets/img/logo/logo.png\') }}" alt="logo" />
+                        <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="logo" />
 
                     </a>
 
@@ -156,7 +156,7 @@
 
                             <a href="/" class="offcanvas-brand" id="offcanvasNavbarLabel">
 
-                                <img src="{{ asset(\'vrinda-taxi/assets/img/logo/logo.png\') }}" alt="" />
+                                <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="" />
 
                             </a>
 
@@ -395,7 +395,7 @@
 
             <a href="/" class="sidebar-popup-logo">
 
-                <img src="{{ asset(\'vrinda-taxi/assets/img/logo/logo.png\') }}" alt="" />
+                <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="" />
 
             </a>
 

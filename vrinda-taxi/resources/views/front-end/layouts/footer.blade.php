@@ -459,13 +459,13 @@
                                          <img class="visa" src="{{ asset('vrinda-taxi/assets/img/payment/3.png') }}" alt="" />
                                      </div>
                                      <!-- <div class="payment-img">
-                        <img class="google" src="assets/img/payment/google-pay.png" alt="" />
+                        <img class="google" src="{{ asset('vrinda-taxi/assets/img/payment/google-pay.png') }}" alt="" />
                       </div>
                       <div class="payment-img">
-                        <img class="amex" src="assets/img/payment/american-express.png" alt="" />
+                        <img class="amex" src="{{ asset('vrinda-taxi/assets/img/payment/american-express.png') }}" alt="" />
                       </div>
                       <div class="payment-img">
-                        <img class="discover" src="assets/img/payment/discover.png" alt="" />
+                        <img class="discover" src="{{ asset('vrinda-taxi/assets/img/payment/discover.png') }}" alt="" />
                       </div> -->
                                  </div>
                              </div>

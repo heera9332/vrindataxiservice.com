@@ -243,7 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <!-- <img src="assets/img/hero/1.png" alt="Vrinda Taxi Service" class="d-block" style="width:100%"> -->
+                    <!-- <img src="{{ asset('vrinda-taxi/assets/img/hero/1.png') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%"> -->
                     <video autoplay loop muted playsinline src="{{ asset('vrinda-taxi/assets/video/banner-1.mp4') }}" style="width:100%; height:523px; object-fit:cover;"></video>
                 </div>
 
@@ -737,7 +737,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <div class="col-md-6 col-lg-4">
                             <div class="blog-item">
                                 <div class="blog-img mb-4">
-                                    <img src="assets/img/pkg/p13.webp" alt="Haridwar Rishikesh Tour">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/pkg/p13.webp') }}" alt="Haridwar Rishikesh Tour">
                                 </div>
                                 <div class="blog-info">
                                     <h4 class="blog-title">
