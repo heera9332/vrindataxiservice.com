@@ -14,15 +14,39 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="" />
+    @php
+        $slugClean = str_replace('-', ' ', $slug);
+        $slugParts = explode('-to-', $slug);
+        if (isset($slugParts[1])) {
+            $from = ucwords(str_replace('-', ' ', $slugParts[0]));
+            $to = ucwords(str_replace('-', ' ', $slugParts[1]));
+            $pageHeading = $from . ' to ' . $to . ' Taxi Service';
+            $destinationName = $to;
+        } else {
+            $destinationName = ucwords($slugClean);
+            $pageHeading = $destinationName . ' Taxi Service';
+        }
+        $canonicalUrl = 'https://vrindataxiservice.com/' . ltrim($slug, '/');
+    @endphp
 
-    <meta name="keywords" content="" />
+    <meta name="description" content="Book affordable {{ $pageHeading }} with Vrinda Taxi Service. Safe drivers, clean cabs, 24/7 service & competitive rates. Book online now!" />
+    <meta name="keywords" content="{{ strtolower($pageHeading) }}, taxi service {{ strtolower($destinationName) }}, vrinda taxi cab" />
+    <meta name="author" content="Vrinda Taxi Service" />
 
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="{{ $canonicalUrl }}">
 
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ $pageHeading }} | Vrinda Taxi Service">
+    <meta property="og:description" content="Book affordable {{ $pageHeading }} with Vrinda Taxi Service. Safe drivers, clean cabs, 24/7 service & competitive rates.">
+    <meta property="og:url" content="{{ $canonicalUrl }}">
+    <meta property="og:site_name" content="Vrinda Taxi Service">
+    <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
+    <meta property="og:locale" content="en_IN">
 
     <!-- title -->
-
-    <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
+    <title>{{ $pageHeading }} | Vrinda Taxi Service</title>
 
 
 

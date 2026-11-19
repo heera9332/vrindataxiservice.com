@@ -14,15 +14,24 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="" />
+    <meta name="description" content="Book reliable and comfortable taxi service from Vrindavan & Mathura to Rishikesh & Haridwar. One-way drops and round-trip cabs at best rates." />
+    <meta name="keywords" content="vrindavan to rishikesh taxi, vrindavan to haridwar cab, mathura to rishikesh taxi service" />
+    <meta name="author" content="Vrinda Taxi Service" />
 
-    <meta name="keywords" content="" />
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://vrindataxiservice.com/vrindavan-to-rishikesh-taxi-service">
 
-
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vrindavan to Rishikesh Taxi Service | Vrinda Taxi Service">
+    <meta property="og:description" content="Book reliable and comfortable taxi service from Vrindavan & Mathura to Rishikesh & Haridwar. One-way drops and round-trip cabs at best rates.">
+    <meta property="og:url" content="https://vrindataxiservice.com/vrindavan-to-rishikesh-taxi-service">
+    <meta property="og:site_name" content="Vrinda Taxi Service">
+    <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
+    <meta property="og:locale" content="en_IN">
 
     <!-- title -->
-
-    <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
+    <title>Vrindavan to Rishikesh Taxi Service | Vrinda Taxi Service</title>
 
 
 

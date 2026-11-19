@@ -14,15 +14,24 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="" />
+    <meta name="description" content="Book reliable and affordable taxi service from Vrindavan to Khatu Shyam Ji Temple. One-way and round trips, clean cabs, professional drivers." />
+    <meta name="keywords" content="vrindavan to khatu shyam taxi, khatu shyam ji cab booking, mathura to khatu shyam taxi service" />
+    <meta name="author" content="Vrinda Taxi Service" />
 
-    <meta name="keywords" content="" />
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://vrindataxiservice.com/khatoo-shyam">
 
-
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vrindavan to Khatu Shyam Taxi Service | Vrinda Taxi Service">
+    <meta property="og:description" content="Book reliable and affordable taxi service from Vrindavan to Khatu Shyam Ji Temple. One-way and round trips, clean cabs, professional drivers.">
+    <meta property="og:url" content="https://vrindataxiservice.com/khatoo-shyam">
+    <meta property="og:site_name" content="Vrinda Taxi Service">
+    <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
+    <meta property="og:locale" content="en_IN">
 
     <!-- title -->
-
-    <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
+    <title>Vrindavan to Khatu Shyam Taxi Service | Vrinda Taxi Service</title>
 
 
 

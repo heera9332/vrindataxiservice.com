@@ -20,13 +20,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Canonical Tag -->
-<link rel="canonical" href="https://vrindataxiservice.com/">
+<link rel="canonical" href="https://vrindataxiservice.com/vrindavan-sightseeing">
 
 <!-- Open Graph Tags (Facebook + WhatsApp Sharing) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Best Taxi Service in Vrindavan | Book Cab 24/7">
-<meta property="og:description" content="Affordable taxi service in Vrindavan near Chaar Dham Mandir. Local & outstation cab with safe drivers. Book now!">
-<meta property="og:url" content="https://vrindataxiservice.com/">
+<meta property="og:title" content="Vrindavan & Mathura Sightseeing Taxi Service | Braj Darshan Cabs">
+<meta property="og:description" content="Explore Banke Bihari, Prem Mandir, ISKCON, Krishna Janmabhoomi, Govardhan & Barsana with Vrinda Taxi Service sightseeing packages. Clean AC cars & local drivers.">
+<meta property="og:url" content="https://vrindataxiservice.com/vrindavan-sightseeing">
 <meta property="og:site_name" content="Vrinda Taxi Service">
 <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
 <meta property="og:locale" content="en_IN">

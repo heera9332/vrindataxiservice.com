@@ -20,13 +20,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Canonical Tag -->
-<link rel="canonical" href="https://vrindataxiservice.com/">
+<link rel="canonical" href="https://vrindataxiservice.com/outstation-taxi">
 
 <!-- Open Graph Tags (Facebook + WhatsApp Sharing) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Best Taxi Service in Vrindavan | Book Cab 24/7">
-<meta property="og:description" content="Affordable taxi service in Vrindavan near Chaar Dham Mandir. Local & outstation cab with safe drivers. Book now!">
-<meta property="og:url" content="https://vrindataxiservice.com/">
+<meta property="og:title" content="Outstation Taxi Service from Vrindavan | One-Way & Round Trips">
+<meta property="og:description" content="Book outstation cabs from Vrindavan to Delhi, Jaipur, Agra, Haridwar, Lucknow, Dehradun & all major cities. Best per-km rates with experienced drivers.">
+<meta property="og:url" content="https://vrindataxiservice.com/outstation-taxi">
 <meta property="og:site_name" content="Vrinda Taxi Service">
 <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
 <meta property="og:locale" content="en_IN">

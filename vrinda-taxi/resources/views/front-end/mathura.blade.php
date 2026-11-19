@@ -14,15 +14,24 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="" />
+    <meta name="description" content="Book top-rated taxi service in Mathura & Vrindavan. Local sightseeing, Mathura Junction railway station pickup, Krishna Janmabhoomi darshan & outstation cabs." />
+    <meta name="keywords" content="taxi service in mathura, mathura cab booking, mathura junction taxi, vrinda taxi mathura" />
+    <meta name="author" content="Vrinda Taxi Service" />
 
-    <meta name="keywords" content="" />
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://vrindataxiservice.com/mathura">
 
-
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Taxi Service in Mathura | Vrinda Taxi Service - Cab Booking 24/7">
+    <meta property="og:description" content="Book top-rated taxi service in Mathura & Vrindavan. Local sightseeing, Mathura Junction railway station pickup, Krishna Janmabhoomi darshan & outstation cabs.">
+    <meta property="og:url" content="https://vrindataxiservice.com/mathura">
+    <meta property="og:site_name" content="Vrinda Taxi Service">
+    <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
+    <meta property="og:locale" content="en_IN">
 
     <!-- title -->
-
-    <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
+    <title>Taxi Service in Mathura | Vrinda Taxi Service - Cab Booking 24/7</title>
 
 
 

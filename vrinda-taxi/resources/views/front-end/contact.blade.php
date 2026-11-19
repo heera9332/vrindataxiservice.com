@@ -6,11 +6,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="Contact Vrinda Taxi Service in Vrindavan for 24/7 taxi booking, outstation cabs & airport transfers. Call +91 9452667708 or visit our office near Chaar Dham Mandir." />
+    <meta name="keywords" content="contact vrinda taxi service, vrindavan taxi number, taxi booking phone mathura, cab service contact vrindavan" />
+    <meta name="author" content="Vrinda Taxi Service" />
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://vrindataxiservice.com/contact">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | Vrinda Taxi Service - Call +91 9452667708">
+    <meta property="og:description" content="Contact Vrinda Taxi Service in Vrindavan for 24/7 taxi booking, outstation cabs & airport transfers. Call +91 9452667708 or visit our office near Chaar Dham Mandir.">
+    <meta property="og:url" content="https://vrindataxiservice.com/contact">
+    <meta property="og:site_name" content="Vrinda Taxi Service">
+    <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
+    <meta property="og:locale" content="en_IN">
 
     <!-- title -->
-    <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
+    <title>Contact Us | Vrinda Taxi Service - Call +91 9452667708</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />

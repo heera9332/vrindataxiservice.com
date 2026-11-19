@@ -6,11 +6,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="Book curated tour packages for Vrindavan, Mathura, Govardhan, Barsana, Nandgaon, Gokul, and Agra. Affordable pricing, experienced drivers & comfortable vehicles." />
+    <meta name="keywords" content="vrindavan tour packages, mathura braj darshan tour, govardhan barsana taxi package, vrinda taxi tour packages" />
+    <meta name="author" content="Vrinda Taxi Service" />
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://vrindataxiservice.com/package">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tour Packages | Vrinda Taxi Service - Vrindavan & Mathura Tours">
+    <meta property="og:description" content="Book curated tour packages for Vrindavan, Mathura, Govardhan, Barsana, Nandgaon, Gokul, and Agra. Affordable pricing, experienced drivers & comfortable vehicles.">
+    <meta property="og:url" content="https://vrindataxiservice.com/package">
+    <meta property="og:site_name" content="Vrinda Taxi Service">
+    <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
+    <meta property="og:locale" content="en_IN">
 
     <!-- title -->
-    <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
+    <title>Tour Packages | Vrinda Taxi Service - Vrindavan & Mathura Tours</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />

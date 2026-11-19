@@ -20,13 +20,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Canonical Tag -->
-<link rel="canonical" href="https://vrindataxiservice.com/">
+<link rel="canonical" href="https://vrindataxiservice.com/airport-taxi">
 
 <!-- Open Graph Tags (Facebook + WhatsApp Sharing) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Best Taxi Service in Vrindavan | Book Cab 24/7">
-<meta property="og:description" content="Affordable taxi service in Vrindavan near Chaar Dham Mandir. Local & outstation cab with safe drivers. Book now!">
-<meta property="og:url" content="https://vrindataxiservice.com/">
+<meta property="og:title" content="Airport Taxi Service Vrindavan | Delhi & Agra Airport Cabs">
+<meta property="og:description" content="Reliable 24/7 airport taxi service from Vrindavan & Mathura to Delhi IGI Airport, Jewar & Agra Airport. Timely pickups, sanitized cabs, transparent fares.">
+<meta property="og:url" content="https://vrindataxiservice.com/airport-taxi">
 <meta property="og:site_name" content="Vrinda Taxi Service">
 <meta property="og:image" content="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}">
 <meta property="og:locale" content="en_IN">
