@@ -176,6 +176,14 @@
  <script src="{{ asset('vrinda-taxi/assets/js/flatpickr.min.js') }}"></script>
  <script src="{{ asset('vrinda-taxi/assets/js/main.js') }}"></script>
  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1190e059c5bc497bafd35e121aae37b1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+ <!-- Floating Book Now Button (Left Side) -->
+ <div class="floating-book-now">
+     <a href="/#book-now-form" id="floatingBookNowBtn" class="floating-book-btn" onclick="scrollToBookingForm(event)">
+         <i class="fas fa-taxi"></i>
+         <span>Book Now</span>
+     </a>
+ </div>
+
  <!-- Floating Sidebar -->
  <div class="floating-contact">
 
@@ -190,6 +198,24 @@
      </a>
 
  </div>
+
+ <script>
+ function scrollToBookingForm(e) {
+     var bookingForm = document.getElementById("book-now-form");
+     if (bookingForm) {
+         if (e) {
+             e.preventDefault();
+         }
+         bookingForm.scrollIntoView({ behavior: "smooth", block: "center" });
+         var pickupInput = document.getElementById("pickup");
+         if (pickupInput) {
+             setTimeout(function() {
+                 pickupInput.focus();
+             }, 500);
+         }
+     }
+ }
+ </script>
 
   <script>
 // Disable Right Click
@@ -378,6 +404,75 @@ document.addEventListener("keydown", function (e) {
         .footer-area .footer-social {
             justify-content: flex-start;
             margin-top: 15px;
+        }
+    }
+
+    /* Floating Book Now (Left Side) */
+    .floating-book-now {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9999;
+    }
+
+    .floating-book-now a.floating-book-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #fdc800 0%, #f59e0b 100%);
+        color: #0b1118 !important;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 12px 18px 12px 14px;
+        border-radius: 0 30px 30px 0;
+        box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.25);
+        text-decoration: none !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+
+    .floating-book-now a.floating-book-btn i {
+        font-size: 16px;
+        color: #0b1118;
+        animation: carBounce 2s infinite ease-in-out;
+    }
+
+    @keyframes carBounce {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(3px);
+        }
+    }
+
+    .floating-book-now a.floating-book-btn:hover {
+        padding-left: 20px;
+        padding-right: 24px;
+        background: linear-gradient(135deg, #0F766E 0%, #115E59 100%);
+        color: #ffffff !important;
+        box-shadow: 3px 6px 20px rgba(15, 118, 110, 0.45);
+    }
+
+    .floating-book-now a.floating-book-btn:hover i {
+        color: #fdc800;
+    }
+
+    @media (max-width: 768px) {
+        .floating-book-now {
+            top: auto;
+            bottom: 20px;
+            left: 12px;
+            transform: none;
+        }
+        .floating-book-now a.floating-book-btn {
+            border-radius: 30px;
+            padding: 10px 16px;
+            font-size: 13px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
         }
     }
 </style>
