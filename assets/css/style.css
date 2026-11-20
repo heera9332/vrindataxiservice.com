@@ -4310,8 +4310,8 @@ label {
 41. Footer css
 ======================*/
 .footer-area {
-  /* background: var(--footer-bg); */
-  background-color: #76730b;
+  background: var(--footer-bg);
+  /* background-color: #76730b; */
   position: relative;
   z-index: 1;
 }

@@ -223,3 +223,157 @@ document.addEventListener("keydown", function (e) {
     }
 });
 </script>
+<!-- Footer Dark Theme Styles -->
+<style>
+    .footer-area {
+        background-color: #0b1118 !important;
+        background: linear-gradient(180deg, #0f172a 0%, #080d14 100%) !important;
+        color: #94a3b8 !important;
+        position: relative;
+        z-index: 1;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-area .footer-shape img {
+        opacity: 0.05 !important;
+        mix-blend-mode: overlay;
+    }
+    .footer-area .footer-widget-title {
+        color: #ffffff !important;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 12px;
+    }
+    .footer-area .footer-widget-title::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #fdc800;
+        border-radius: 2px;
+    }
+    .footer-area .footer-widget-box p {
+        color: #94a3b8 !important;
+        line-height: 1.8;
+    }
+    .footer-area .footer-widget-box strong {
+        color: #e2e8f0 !important;
+    }
+    .footer-area .footer-payment h4 {
+        color: #e2e8f0 !important;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .footer-area .footer-list li {
+        margin-bottom: 12px;
+    }
+    .footer-area .footer-list li a {
+        color: #94a3b8 !important;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .footer-area .footer-list li a i {
+        color: #fdc800 !important;
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+    .footer-area .footer-list li a:hover {
+        color: #ffffff !important;
+        transform: translateX(4px);
+    }
+    .footer-area .footer-list li a:hover i {
+        color: #ffffff !important;
+    }
+    .footer-area .footer-contact li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+    .footer-area .footer-contact .icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        background: rgba(253, 200, 0, 0.12) !important;
+        border: 1px solid rgba(253, 200, 0, 0.25);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-area .footer-contact .icon i {
+        color: #fdc800 !important;
+        font-size: 16px;
+    }
+    .footer-area .footer-contact .content h5 {
+        color: #ffffff !important;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    .footer-area .footer-contact .content p,
+    .footer-area .footer-contact .content a {
+        color: #94a3b8 !important;
+        margin-bottom: 0;
+        line-height: 1.6;
+        transition: color 0.3s ease;
+    }
+    .footer-area .footer-contact .content a:hover {
+        color: #fdc800 !important;
+    }
+    .footer-area .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+        padding-top: 25px;
+        margin-top: 10px;
+    }
+    .footer-area .copyright-text {
+        color: #94a3b8 !important;
+        margin-bottom: 0;
+    }
+    .footer-area .copyright-text a {
+        color: #fdc800 !important;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    .footer-area .copyright-text a:hover {
+        color: #ffffff !important;
+    }
+    .footer-area .footer-social {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    .footer-area .footer-social li a {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+        transition: all 0.3s ease;
+    }
+    .footer-area .footer-social li a:hover {
+        background: #fdc800;
+        border-color: #fdc800;
+        color: #0b1118 !important;
+        transform: translateY(-3px);
+    }
+    @media (max-width: 767px) {
+        .footer-area .footer-social {
+            justify-content: flex-start;
+            margin-top: 15px;
+        }
+    }
+</style>
