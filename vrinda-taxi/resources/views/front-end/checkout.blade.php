@@ -216,13 +216,13 @@
                             @csrf
 
                             <!-- Hidden Journey Parameters -->
-                            <input type="hidden" name="trip_type" value="{{ $draft['trip_type'] ?? 'one_way' }}">
+                            <input type="hidden" name="trip_type" value="{{ $draft['trip_type'] ?? 'local' }}">
                             <input type="hidden" name="pickup_location" value="{{ $draft['pickup_location'] ?? '' }}">
                             <input type="hidden" name="drop_location" value="{{ $draft['drop_location'] ?? '' }}">
                             <input type="hidden" name="ride_date" value="{{ $draft['ride_date'] ?? '' }}">
                             <input type="hidden" name="return_date" value="{{ $draft['return_date'] ?? '' }}">
                             <input type="hidden" name="distance_km" value="{{ $draft['distance_km'] ?? 0 }}">
-                            <input type="hidden" name="fare" value="{{ $draft['fare'] ?? 300 }}">
+                            <input type="hidden" name="fare" value="{{ $draft['fare'] ?? 0 }}">
 
                             <div class="row g-3">
                                 <!-- Full Name -->
@@ -345,11 +345,11 @@
                                 <i class="fas fa-receipt text-primary me-2" style="color: var(--theme-color, #0F766E) !important;"></i> Ride Summary
                             </h4>
                             @php
-                                $tripBadge = 'One Way';
+                                $tripBadge = 'Local Taxi';
                                 if(($draft['trip_type'] ?? '') === 'round_trip') {
                                     $tripBadge = 'Round Trip';
-                                } elseif(($draft['trip_type'] ?? '') === 'local') {
-                                    $tripBadge = 'Local Taxi';
+                                } elseif(($draft['trip_type'] ?? '') === 'one_way') {
+                                    $tripBadge = 'One Way';
                                 }
                             @endphp
                             <span class="badge bg-primary px-3 py-2 text-uppercase fw-bold" style="background-color: var(--theme-color, #0F766E) !important; font-size: 11px;">
@@ -389,25 +389,25 @@
                             </div>
                             @endif
 
-                            @if(!empty($draft['distance_km']))
+                            @if(!empty($draft['distance_km']) && ($draft['trip_type'] ?? '') !== 'local')
                             <div class="d-flex justify-content-between py-2 border-bottom">
                                 <span class="text-muted"><i class="fas fa-road me-1 text-primary"></i> Approx. Distance:</span>
                                 <span class="fw-bold text-dark">
                                     {{ $draft['distance_km'] }} km 
                                     @if(($draft['trip_type'] ?? '') === 'round_trip')
-                                        <small class="text-muted">({{ $draft['total_distance'] ?? ($draft['distance_km'] * 2) }} km billed)</small>
+                                        <small class="text-muted">({{ $draft['total_distance'] ?? ($draft['distance_km'] * 2) }} km)</small>
                                     @endif
                                 </span>
                             </div>
                             @endif
                         </div>
 
-                        <!-- Fare Highlight Card -->
+                        <!-- Pricing Assurance Card (No Charge or Fare Displayed) -->
                         <div class="fare-highlight-box mb-3 text-center">
-                            <span class="text-white-50 text-uppercase small fw-bold">Estimated Fare</span>
-                            <h2 class="text-white fw-bold my-1">₹{{ number_format($draft['fare'] ?? 300) }}</h2>
-                            <small class="text-white-50 d-block" style="font-size: 12px;">
-                                Includes AC Taxi, Driver Allowance & Fuel. No hidden charges.
+                            <span class="badge bg-warning text-dark mb-2 px-3 py-1 fw-bold text-uppercase" style="font-size: 11px;">Best Rate Assurance</span>
+                            <h5 class="text-white fw-bold mb-1">Affordable Pricing Guaranteed</h5>
+                            <small class="text-white-50 d-block" style="font-size: 12px; line-height: 1.5;">
+                                Final fare will be discussed and confirmed over call or WhatsApp based on your vehicle choice. No advance payment required.
                             </small>
                         </div>
 

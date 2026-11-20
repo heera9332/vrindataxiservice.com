@@ -35,7 +35,7 @@ class BookingController extends Controller
     public function checkout(Request $request)
     {
         $distance = (float) ($request->distance_km ?: session('booking_draft.distance_km', 25));
-        $trip = $request->trip_type ?: session('booking_draft.trip_type', 'one_way');
+        $trip = $request->trip_type ?: session('booking_draft.trip_type', 'local');
         $pickup = $request->pickup_location ?: session('booking_draft.pickup_location', 'Vrindavan');
         $drop = $request->drop_location ?: session('booking_draft.drop_location', 'Mathura');
 

@@ -286,7 +286,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Stylish Trip Toggle -->
                 <div class="trip-toggle-wrap">
                   
-                    <button type="button" class="trip-btn" onclick="setTripType(this,'local')">
+                    <button type="button" class="trip-btn active" onclick="setTripType(this,'local')">
                         Local
                     </button>
 
@@ -294,7 +294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         One Way
                     </button>
 
-                    <button type="button" class="trip-btn active" onclick="setTripType(this,'round_trip')">
+                    <button type="button" class="trip-btn" onclick="setTripType(this,'round_trip')">
                         Round Trip
                     </button>
 
@@ -304,7 +304,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <form method="POST" action="{{ route('booking.checkout') }}" onsubmit="return calculateDistanceBeforeSubmit(event)">
                     @csrf
 
-                    <input type="hidden" name="trip_type" id="tripType" value="round_trip">
+                    <input type="hidden" name="trip_type" id="tripType" value="local">
                     <input type="hidden" name="distance_km" id="distanceKm">
 
                     <div class="row g-3 align-items-end">
@@ -357,7 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <!-- Return -->
-                        <div class="col-lg-3 col-md-6" id="returnDateWrapper">
+                        <div class="col-lg-3 col-md-6" id="returnDateWrapper" style="display: none;">
                             <div class="form-group">
                                 <label class="form-label">Return Date & Time</label>
                                 <div class="form-icon">
@@ -453,12 +453,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         //     }
         // }
             function setTripType(el, type) {
-                console.log("Clicked:", el, type);
+                if (typeof type === 'undefined') {
+                    type = el;
+                    el = null;
+                }
 
-                document.getElementById("tripType").value = type;
+                const tripInput = document.getElementById("tripType");
+                if (tripInput) {
+                    tripInput.value = type;
+                }
 
                 document.querySelectorAll('.trip-btn').forEach(btn => {
                     btn.classList.remove('active');
+                    if (!el && btn.getAttribute('onclick') && btn.getAttribute('onclick').includes("'" + type + "'")) {
+                        btn.classList.add('active');
+                    }
                 });
 
                 if (el && el.classList) {
@@ -468,13 +477,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 const wrapper = document.getElementById("returnDateWrapper");
                 const returnInput = document.getElementById("returnDate");
 
-                if (type === "round_trip") {
-                    wrapper.style.display = "block";
-                    returnInput.setAttribute("required", "required");
-                } else {
-                    wrapper.style.display = "none";
-                    returnInput.removeAttribute("required");
-                    returnInput.value = "";
+                if (wrapper && returnInput) {
+                    if (type === "round_trip") {
+                        wrapper.style.display = "block";
+                        returnInput.setAttribute("required", "required");
+                    } else {
+                        wrapper.style.display = "none";
+                        returnInput.removeAttribute("required");
+                        returnInput.value = "";
+                    }
                 }
             }
 
@@ -503,8 +514,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             let trip = document.getElementById("tripType").value;
 
             if(!trip || trip === 'undefined') {
-                trip = 'round_trip';
-                document.getElementById('tripType').value = 'round_trip';
+                trip = 'local';
+                document.getElementById('tripType').value = 'local';
             }
 
             if (!pickup || !drop || !pickupDate) {
@@ -560,7 +571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         window.addEventListener("load", function() {
-            setTripType("round_trip");
+            setTripType("local");
             disablePastDates();
         });
 

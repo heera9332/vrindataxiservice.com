@@ -1,1014 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Confirmation - Success</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    
-    
-       
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17366349643">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17366349643');
-</script>
-
-
-
-
-
-
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K362P6XC');</script>
-<!-- End Google Tag Manager -->
-
-<!--2. Paste this code immediately after the opening <body> tag:-->
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K362P6XC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-<!--[26/09, 12:12 pm] Ocean Ads Patna Google Edward: *Install Google Tag Manager*-->
-<!--Copy the code below and paste it onto every page of your website.-->
-<!--*1. Paste this code as high in the <head> of the page as possible:*-->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K362P6XC');</script>
-<!-- End Google Tag Manager -->
-
-<!--*2. Paste this code immediately after the opening <body> tag:*-->
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K362P6XC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-
-
-
-
-</head>
-<body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">
-                <h1>Vrinda Texi Service </h1>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="success-container">
-            <!-- Success Icon & Title -->
-            <div class="success-header">
-                <div class="success-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h1 class="success-title">Booking Request Received</h1>
-                <p>"Your booking request has been received successfully. Our team will contact you shortly to confirm the booking and final fare."</p>
-            </div>
-
-            <!-- Quick Info Card - Visible on Front -->
-            <div class="quick-info-card">
-                <div class="service-section">
-                    <p class="service-label">Service Booked</p>
-                    <p class="service-name">Premium Event Planning Package</p>
-                </div>
-
-                <div class="quick-details">
-                    <div class="quick-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <div>
-                            <p class="quick-label">Date</p>
-                            <p class="quick-value">{{$booking->ride_date}}</p>
-                        </div>
-                    </div>
-                    <div class="quick-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <p class="quick-label">Time</p>
-                            <p class="quick-value">{{$booking->ride_time}}</p>
-                        </div>
-                    </div>
-                    <div class="quick-item">
-                        <i class="fas fa-tag"></i>
-                        <div>
-                            <p class="quick-label">Total Amount</p>
-                            <!--<p class="quick-value amount">  Price will be finalized after discussing your requirements over a call. {{$booking->fare}}</p>-->
-                            <p class="quick-value amount"> Final fare will be discussed and confirmed over a call. </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="status-inline">
-                    <i class="fas fa-check"></i>
-                    <span>PENDING</span>
-                </div>
-            </div>
-
-            <!-- Confirmation Message -->
-            <p class="success-message">Your booking request has been received successfully. Our team will contact you shortly to confirm the booking and final fare and  A confirmation email has been sent to your registered email address.</p>
-
-            <!-- Action Buttons - Primary CTA -->
-            <!-- <div class="button-group-top">
-                <button class="btn btn-primary">
-                    <i class="fas fa-download"></i> Download Receipt
-                </button>
-                <button class="btn btn-outline">
-                    <i class="fas fa-home"></i> Back to Home
-                </button>
-            </div> -->
-            
-            
-            
-            <div class="button-group-bottom">
-                <p>To confirm your booking, please click on WhatsApp or call us.</p>
-                <a href="{{ route('booking.whatsapp', $booking->id) }}" class="btn theme-btn btn-outline-secondary">
-                       Send on WhatsApp
-                </a>
-                <button class="btn btn-outline-secondary">
-                    <i class="fas fa-question-circle"></i> Need Help?
-                </button>
-            </div>
-            
-            
-
-            <!-- Booking Details Card -->
-            <div class="booking-card">
-                <!-- Confirmation Number -->
-                <div class="confirmation-section">
-                    <div class="confirmation-box">
-                        <p class="label">Confirmation Number</p>
-                        <p class="confirmation-id">{{$booking->booking_no}}</p>
-                    </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="divider"></div>
-
-                <!-- Booking Details Grid -->
-                <div class="details-section">
-                    <h3 class="section-title">Complete Booking Details</h3>
-                    <div class="details-grid">
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-briefcase"></i> Service
-                            </p>
-                            <p class="value">Premium Event Planning Package</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-calendar-alt"></i> Date
-                            </p>
-                            <p class="value">{{$booking->ride_date}}</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-clock"></i> Time
-                            </p>
-                            <p class="value">{{$booking->ride_time}}</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-map-marker-alt"></i>Pickup Location
-                            </p>
-                            <p class="value">{{$booking->pickup_location}}</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-map-marker-alt"></i>Drop Location
-                            </p>
-                            <p class="value">{{$booking->drop_location}}</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-user"></i> Organizer
-                            </p>
-                            <p class="value">{{$booking->name}}</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-phone"></i> Contact
-                            </p>
-                            <p class="value">+91 {{$booking->phone}}</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-envelope"></i> Email
-                            </p>
-                            <p class="value">{{$booking->email}}</p>
-                        </div>
-
-                        <div class="detail-item">
-                            <p class="label">
-                                <i class="fas fa-credit-card"></i> Payment Method
-                            </p>
-                            <p class="value">Credit Card (VISA)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="divider"></div>
-
-                <!-- Amount Section -->
-                <div class="amount-section">
-                    <h3 class="section-title">Payment Summary</h3>
-                    <div class="amount-row">
-                        <span class="amount-label">Subtotal</span>
-                        <!--<span class="amount-value">₹ {{$booking->fare}}</span>-->
-                        
-                         <span class="amount-value"> Final fare will be discussed and confirmed over a call.</span>
-                    </div>
-                    <div class="amount-row">
-                        <!-- <span class="amount-label">Tax (18% GST)</span>
-                        <span class="amount-value">₹4,500.00</span> -->
-                    </div>
-                    <div class="amount-row total">
-                        <span class="amount-label">Total Amount Paid</span>
-                        <!--<span class="amount-value">₹ {{$booking->fare}}</span>-->
-                        
-                        <span class="amount-value">Final fare will be discussed and confirmed over a call.</span>
-                    </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="divider"></div>
-
-                <!-- Important Notes -->
-                <div class="notes-section-inline">
-                    <h3 class="section-title">Important Information</h3>
-                    <ul>
-                        <li>Please arrive 15 minutes before your scheduled time</li>
-                        <li>Keep your confirmation number for reference</li>
-                        <li>For any changes, contact us at least 48 hours in advance</li>
-                        <li>Cancellation policy applies as per terms and conditions</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Additional Actions -->
-            <div class="button-group-bottom">
-                <p>To confirm your booking, please click on WhatsApp or call us.</p>
-                <a href="{{ route('booking.whatsapp', $booking->id) }}" class="btn theme-btn btn-outline-secondary">
-                       Send on WhatsApp
-                </a>
-                <button class="btn btn-outline-secondary">
-                    <i class="fas fa-question-circle"></i> Need Help?
-                </button>
-            </div>
-
-            <!-- Contact Support -->
-            <div class="support-section">
-                <p>For any queries, <a href="mailto:support@vrinda.com">contact our support team</a></p>
-                <p class="support-phone">Call us: <strong>+91 9452667708</strong></p>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>&copy; 2026 Vrinda. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
-        </div>
-    </div>
-
-    <!-- <script src="script.js"></script> -->
-</body>
-</html>
-
-<style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #1e40af;
-    --secondary-color: #0f766e;
-    --success-color: #16a34a;
-    --light-bg: #f8fafc;
-    --border-color: #e2e8f0;
-    --text-dark: #1e293b;
-    --text-light: #64748b;
-    --white: #ffffff;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--light-bg);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header */
-.header {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: var(--white);
-    border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 30px;
-    border-radius: 8px 8px 0 0;
-}
-
-.logo h1 {
-    font-size: 32px;
-    color: var(--primary-color);
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-/* Success Container */
-.success-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Success Header */
-.success-header {
-    text-align: center;
-    animation: slideDown 0.6s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Success Icon */
-.success-icon {
-    font-size: 60px;
-    color: var(--success-color);
-    margin-bottom: 12px;
-    animation: scaleIn 0.6s ease-out;
-}
-
-@keyframes scaleIn {
-    from {
-        transform: scale(0);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Success Title */
-.success-title {
-    font-size: 32px;
-    color: var(--primary-color);
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-/* Quick Info Card - Front View */
-.quick-info-card {
-    width: 100%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.25);
-    animation: slideUp 0.6s ease-out;
-    position: relative;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.service-section {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.service-label {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.9;
-    margin-bottom: 8px;
-    display: block;
-}
-
-.service-name {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.4;
-}
-
-.quick-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 25px 0;
-    padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.quick-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-align: left;
-}
-
-.quick-item i {
-    font-size: 20px;
-    opacity: 0.9;
-}
-
-.quick-item div {
-    flex: 1;
-}
-
-.quick-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    opacity: 0.85;
-    margin-bottom: 4px;
-    display: block;
-}
-
-.quick-value {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.quick-value.amount {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.status-inline {
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    margin: 0 auto;
-    display: flex;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.status-inline i {
-    font-size: 14px;
-}
-
-/* Success Message */
-.success-message {
-    font-size: 15px;
-    color: var(--text-light);
-    text-align: center;
-    max-width: 600px;
-    line-height: 1.8;
-    margin: 10px 0;
-}
-
-/* Top Button Group */
-.button-group-top {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    width: 100%;
-    max-width: 500px;
-    margin: 15px auto;
-}
-
-/* Booking Card */
-.booking-card {
-    width: 100%;
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 35px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* Confirmation Section */
-.confirmation-section {
-    margin-bottom: 20px;
-}
-
-.confirmation-box {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.confirmation-box .label {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.9;
-    margin-bottom: 8px;
-}
-
-.confirmation-id {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-/* Divider */
-.divider {
-    height: 1px;
-    background-color: var(--border-color);
-    margin: 25px 0;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 15px;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-/* Details Section */
-.details-section {
-    margin-bottom: 10px;
-}
-
-/* Details Grid */
-.details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.detail-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.detail-item .label {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.detail-item .label i {
-    color: var(--primary-color);
-    width: 16px;
-}
-
-.detail-item .value {
-    font-size: 15px;
-    color: var(--text-dark);
-    font-weight: 500;
-    line-height: 1.5;
-}
-
-/* Amount Section */
-.amount-section {
-    margin-top: 10px;
-}
-
-.amount-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 15px;
-}
-
-.amount-row.total {
-    border-bottom: none;
-    border-top: 2px solid var(--primary-color);
-    margin-top: 10px;
-    padding-top: 15px;
-    font-weight: 700;
-    font-size: 17px;
-    color: var(--primary-color);
-}
-
-.amount-label {
-    color: var(--text-light);
-}
-
-.amount-value {
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
-.amount-row.total .amount-value {
-    color: var(--primary-color);
-}
-
-/* Notes Section Inside Card */
-.notes-section-inline {
-    margin-top: 10px;
-}
-
-.notes-section-inline ul {
-    list-style: none;
-}
-
-.notes-section-inline li {
-    padding: 10px 0 10px 28px;
-    position: relative;
-    color: var(--text-dark);
-    font-size: 14px;
-    line-height: 1.6;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.notes-section-inline li:last-child {
-    border-bottom: none;
-}
-
-.notes-section-inline li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--success-color);
-    font-weight: bold;
-    font-size: 16px;
-}
-
-/* Bottom Button Group */
-.button-group-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-/* Buttons */
-.btn {
-    padding: 11px 24px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    min-width: 160px;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background-color: #1e3a8a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
-}
-
-.btn-secondary {
-    background-color: var(--secondary-color);
-    color: var(--white);
-}
-
-.btn-secondary:hover {
-    background-color: #0d5c61;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
-}
-
-.btn-outline {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-outline:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-    transform: translateY(-2px);
-}
-
-.btn-outline-secondary {
-    background-color: transparent;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-}
-
-.btn-outline-secondary:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    transform: translateY(-2px);
-}
-
-/* Support Section */
-.support-section {
-    text-align: center;
-    padding: 25px 20px;
-    background-color: var(--light-bg);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.support-section p {
-    margin: 8px 0;
-    font-size: 14px;
-    color: var(--text-dark);
-}
-
-.support-section a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.support-section a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
-.support-phone {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-color);
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 25px 20px;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-light);
-    font-size: 12px;
-    margin-top: 35px;
-}
-
-.footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 12px;
-    }
-
-    .header {
-        padding: 20px 12px;
-        margin-bottom: 20px;
-    }
-
-    .logo h1 {
-        font-size: 24px;
-    }
-
-    .success-title {
-        font-size: 26px;
-    }
-
-    .success-icon {
-        font-size: 50px;
-    }
-
-    .quick-info-card {
-        padding: 22px;
-    }
-
-    .service-name {
-        font-size: 18px;
-    }
-
-    .quick-details {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin: 18px 0;
-        padding: 18px 0;
-    }
-
-    .quick-item {
-        padding: 8px 0;
-    }
-
-    .success-message {
-        font-size: 14px;
-    }
-
-    .button-group-top,
-    .button-group-bottom {
-        max-width: 100%;
-    }
-
-    .booking-card {
-        padding: 22px;
-    }
-
-    .details-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .confirmation-id {
-        font-size: 20px;
-    }
-
-    .support-section {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .quick-info-card {
-        padding: 18px;
-    }
-
-    .service-name {
-        font-size: 16px;
-    }
-
-    .quick-details {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin: 15px 0;
-        padding: 15px 0;
-    }
-
-    .quick-label {
-        font-size: 10px;
-    }
-
-    .quick-value {
-        font-size: 14px;
-    }
-
-    .quick-value.amount {
-        font-size: 16px;
-    }
-
-    .success-title {
-        font-size: 22px;
-    }
-
-    .success-icon {
-        font-size: 45px;
-    }
-
-    .success-message {
-        font-size: 13px;
-    }
-
-    .booking-card {
-        padding: 18px;
-    }
-
-    .btn {
-        padding: 10px 18px;
-        font-size: 13px;
-        min-width: 140px;
-    }
-
-    .button-group-top,
-    .button-group-bottom {
-        gap: 10px;
-    }
-
-    .confirmation-id {
-        font-size: 18px;
-    }
-
-    .section-title {
-        font-size: 13px;
-        margin-bottom: 15px;
-    }
-
-    .detail-item .value {
-        font-size: 14px;
-    }
-
-    .amount-row {
-        font-size: 13px;
-        padding: 10px 0;
-    }
-
-    .amount-row.total {
-        font-size: 15px;
-    }
-
-    .notes-section-inline li {
-        font-size: 13px;
-        padding: 8px 0 8px 24px;
-    }
-
-    .support-section {
-        padding: 20px 15px;
-    }
-
-    .support-section p {
-        font-size: 13px;
-    }
-
-    .footer {
-        font-size: 11px;
-        padding: 20px 12px;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .button-group-top,
-    .button-group-bottom,
-    .support-section,
-    .footer {
-        display: none;
-    }
-
-    .booking-card {
-        box-shadow: none;
-        border: 1px solid #ccc;
-    }
-
-    body {
-        background-color: white;
-    }
-
-    .container {
-        max-width: 100%;
-    }
-}
-
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Confirmation #{{ $booking->booking_no }} - Vrinda Taxi Service</title>
+    <meta name="description" content="Your taxi booking request #{{ $booking->booking_no }} has been received successfully by Vrinda Taxi Service. Sanitized AC cabs and verified drivers in Mathura & Vrindavan." />
+    <meta name="robots" content="noindex, follow">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/all-fontawesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/magnific-popup.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/slimselect.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/flatpickr.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/style.css') }}" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17366349643"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17366349643');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K362P6XC');</script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        .booking-success-wrapper {
+            background-color: #f8fafc;
+        }
+        .booking-success-wrapper .step-progress-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .booking-success-wrapper .step-progress-item {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: #64748b;
+        }
+        .booking-success-wrapper .step-progress-item.completed {
+            color: #10b981;
+        }
+        .booking-success-wrapper .step-progress-item.active {
+            color: #10b981;
+        }
+        .booking-success-wrapper .step-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            font-size: 14px;
+            background: #e2e8f0;
+            color: #475569;
+        }
+        .booking-success-wrapper .step-progress-item.completed .step-circle {
+            background: #10b981;
+            color: #fff;
+        }
+        .booking-success-wrapper .step-progress-item.active .step-circle {
+            background: #10b981;
+            color: #fff;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+        }
+        .booking-success-wrapper .step-divider {
+            width: 40px;
+            height: 2px;
+            background: #10b981;
+        }
+
+        .success-receipt-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .success-card-header {
+            background: linear-gradient(135deg, #0F766E 0%, #115E59 100%);
+            color: #ffffff;
+            padding: 35px 25px;
+            text-align: center;
+        }
+        .success-check-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            margin-bottom: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+        }
+        .booking-no-badge {
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px dashed rgba(255, 255, 255, 0.45);
+            border-radius: 8px;
+            padding: 8px 18px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+        .details-info-table th {
+            font-weight: 600;
+            color: #64748b;
+            font-size: 13px;
+            text-transform: uppercase;
+            width: 35%;
+            border-color: #f1f5f9;
+        }
+        .details-info-table td {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 15px;
+            border-color: #f1f5f9;
+        }
+        .action-cta-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .whatsapp-cta-btn {
+            background-color: #25D366;
+            color: #ffffff;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .whatsapp-cta-btn:hover {
+            background-color: #1eb855;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+        }
     </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K362P6XC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--===== header ==========-->
+    @include('front-end.layouts.header')
+
+    <main class="main booking-success-wrapper py-5">
+        <!-- breadcrumb -->
+        <div class="site-breadcrumb ng-mt mb-4" style="background: url('{{ asset('vrinda-taxi/assets/img/breadcrumb/01.jpg') }}') center/cover no-repeat;">
+            <div class="container">
+                <h1 class="breadcrumb-title" style="font-size: 2.2rem;">Booking Received</h1>
+                <ul class="breadcrumb-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ route('booking.checkout') }}">Checkout</a></li>
+                    <li class="active">Confirmation</li>
+                </ul>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+
+        <div class="container py-3">
+            <!-- Stepper -->
+            <div class="step-progress-bar">
+                <div class="step-progress-item completed">
+                    <span class="step-circle"><i class="fas fa-check"></i></span>
+                    <span>1. Select Ride</span>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step-progress-item completed">
+                    <span class="step-circle"><i class="fas fa-check"></i></span>
+                    <span>2. Passenger Details</span>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step-progress-item active">
+                    <span class="step-circle"><i class="fas fa-check"></i></span>
+                    <span>3. Booking Confirmed</span>
+                </div>
+            </div>
+
+            <!-- Success Card -->
+            <div class="success-receipt-card mb-4">
+                <div class="success-card-header">
+                    <div class="success-check-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h2 class="text-white fw-bold mb-2" style="font-size: 1.8rem;">Booking Request Received!</h2>
+                    <p class="text-white-50 mb-3" style="max-width: 600px; margin: 0 auto; font-size: 14px;">
+                        Thank you, <strong class="text-white">{{ $booking->name }}</strong>! Your ride request has been registered. Our coordination team will contact you shortly to confirm the ride and driver allocation.
+                    </p>
+                    <div class="booking-no-badge">
+                        <small class="d-block text-white-50 text-uppercase" style="font-size: 10px; letter-spacing: 1px;">Booking Number</small>
+                        <span class="text-white">{{ $booking->booking_no }}</span>
+                    </div>
+                </div>
+
+                <div class="p-4 p-md-5">
+                    @php
+                        $tripLabel = 'Local Taxi Service';
+                        if (($booking->trip_type ?? '') === 'round_trip') {
+                            $tripLabel = 'Round Trip Outstation Taxi';
+                        } elseif (($booking->trip_type ?? '') === 'one_way') {
+                            $tripLabel = 'One Way Outstation Taxi';
+                        }
+                    @endphp
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-3 border-bottom">
+                        <div>
+                            <h4 class="fw-bold mb-1" style="font-size: 1.3rem;">Ride Summary</h4>
+                            <p class="text-muted small mb-0">Review your journey specifications below</p>
+                        </div>
+                        <span class="badge bg-success px-3 py-2 text-uppercase" style="font-size: 12px; letter-spacing: 0.5px;">
+                            <i class="fas fa-clock me-1"></i> {{ strtoupper($booking->status ?? 'Pending') }}
+                        </span>
+                    </div>
+
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered details-info-table align-middle">
+                            <tbody>
+                                <tr>
+                                    <th><i class="fas fa-car me-2 text-primary"></i> Service / Trip</th>
+                                    <td>
+                                        <span class="badge bg-primary me-2" style="background-color: var(--theme-color, #0F766E) !important;">{{ $tripLabel }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="fas fa-map-marker-alt me-2 text-primary"></i> Pickup Location</th>
+                                    <td>{{ $booking->pickup_location }}</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="fas fa-location-arrow me-2 text-danger"></i> Drop Location</th>
+                                    <td>{{ $booking->drop_location }}</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="far fa-calendar-alt me-2 text-primary"></i> Pickup Date & Time</th>
+                                    <td>
+                                        {{ !empty($booking->ride_date) ? \Carbon\Carbon::parse($booking->ride_date)->format('d M, Y') : 'Flexible' }}
+                                        @if(!empty($booking->ride_time))
+                                            at {{ \Carbon\Carbon::parse($booking->ride_time)->format('h:i A') }}
+                                        @endif
+                                    </td>
+                                </tr>
+                                @if(!empty($booking->return_date) && ($booking->trip_type ?? '') === 'round_trip')
+                                <tr>
+                                    <th><i class="far fa-calendar-check me-2 text-primary"></i> Return Date & Time</th>
+                                    <td>
+                                        {{ \Carbon\Carbon::parse($booking->return_date)->format('d M, Y') }}
+                                        @if(!empty($booking->return_time))
+                                            at {{ \Carbon\Carbon::parse($booking->return_time)->format('h:i A') }}
+                                        @endif
+                                    </td>
+                                </tr>
+                                @endif
+                                @if(!empty($booking->distance_km) && ($booking->trip_type ?? '') !== 'local')
+                                <tr>
+                                    <th><i class="fas fa-road me-2 text-primary"></i> Approx. Distance</th>
+                                    <td>{{ $booking->distance_km }} km</td>
+                                </tr>
+                                @endif
+                                <tr>
+                                    <th><i class="far fa-user me-2 text-primary"></i> Passenger Name</th>
+                                    <td>{{ $booking->name }}</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="far fa-phone me-2 text-primary"></i> Contact Number</th>
+                                    <td>+91 {{ $booking->phone }}</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="far fa-envelope me-2 text-primary"></i> Email Address</th>
+                                    <td>{{ $booking->email }}</td>
+                                </tr>
+                                @if(!empty($booking->note))
+                                <tr>
+                                    <th><i class="far fa-comment-alt me-2 text-primary"></i> Landmark / Note</th>
+                                    <td>{{ $booking->note }}</td>
+                                </tr>
+                                @endif
+                                <tr>
+                                    <th><i class="fas fa-hand-holding-dollar me-2 text-success"></i> Payment Method</th>
+                                    <td>
+                                        <span class="text-success fw-bold">Pay to Driver upon completion</span>
+                                        <small class="d-block text-muted">Cash or UPI accepted. Zero advance payment required.</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="fas fa-tag me-2 text-primary"></i> Fare Details</th>
+                                    <td>
+                                        <span class="badge bg-warning text-dark mb-1">Affordable Pricing</span>
+                                        <div class="small text-muted">
+                                            Final fare will be discussed and confirmed over call or WhatsApp based on your vehicle choice.
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Instant WhatsApp / Call Actions -->
+                    <div class="action-cta-box text-center mb-4">
+                        <h5 class="fw-bold mb-2">Want Instant Confirmation or Custom Vehicle?</h5>
+                        <p class="text-muted small mb-3">Connect directly with our 24x7 helpdesk on WhatsApp or Call for priority cab allocation.</p>
+                        <div class="d-flex justify-content-center flex-wrap gap-3">
+                            <a href="{{ route('booking.whatsapp', $booking->id) }}" target="_blank" class="whatsapp-cta-btn">
+                                <i class="fab fa-whatsapp fa-lg"></i> Confirm on WhatsApp
+                            </a>
+                            <a href="tel:+919452667708" class="btn btn-outline-dark px-4 py-2 d-inline-flex align-items-center gap-2" style="font-weight: 600;">
+                                <i class="fas fa-phone-alt"></i> Call +91 9452667708
+                            </a>
+                            <a href="/" class="btn btn-light border px-4 py-2 d-inline-flex align-items-center gap-2" style="font-weight: 600;">
+                                <i class="fas fa-home"></i> Back to Home
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Trust Points -->
+                    <div class="row g-3 text-muted small pt-2 border-top">
+                        <div class="col-sm-6 col-md-3 d-flex align-items-center gap-2">
+                            <i class="fas fa-shield-alt text-success fa-lg"></i>
+                            <span>Verified Drivers</span>
+                        </div>
+                        <div class="col-sm-6 col-md-3 d-flex align-items-center gap-2">
+                            <i class="fas fa-snowflake text-primary fa-lg"></i>
+                            <span>100% Sanitized AC Cabs</span>
+                        </div>
+                        <div class="col-sm-6 col-md-3 d-flex align-items-center gap-2">
+                            <i class="fas fa-clock text-warning fa-lg"></i>
+                            <span>On-Time Pickup</span>
+                        </div>
+                        <div class="col-sm-6 col-md-3 d-flex align-items-center gap-2">
+                            <i class="fas fa-wallet text-success fa-lg"></i>
+                            <span>No Advance Needed</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--======== footer =========-->
+    @include('front-end.layouts.footer')
+</body>
+
+</html>
