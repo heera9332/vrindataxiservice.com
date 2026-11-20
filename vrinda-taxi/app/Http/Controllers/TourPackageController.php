@@ -186,6 +186,17 @@ class TourPackageController extends Controller
         ));
     }
 
+    // ================= FRONT-END PACKAGES LISTING =================
+
+    public function packageView()
+    {
+        $packages = TourPackage::with(['itineraries' => function($q) {
+            $q->orderBy('day_number', 'asc');
+        }, 'inclusions', 'exclusions'])->orderBy('id', 'asc')->get();
+
+        return view('front-end.package', compact('packages'));
+    }
+
     public function tourBooking(){
 
     }
