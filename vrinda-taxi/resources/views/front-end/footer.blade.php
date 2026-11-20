@@ -176,27 +176,28 @@
  <script src="{{ asset('vrinda-taxi/assets/js/flatpickr.min.js') }}"></script>
  <script src="{{ asset('vrinda-taxi/assets/js/main.js') }}"></script>
  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1190e059c5bc497bafd35e121aae37b1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
- <!-- Floating Book Now Button (Left Side) -->
- <div class="floating-book-now">
-     <a href="/#book-now-form" id="floatingBookNowBtn" class="floating-book-btn" onclick="scrollToBookingForm(event)">
+ <!-- Floating Actions (Left Side: Book Now, Call, WhatsApp) -->
+ <div class="floating-left-actions">
+     <!-- Book Now Button -->
+     <a href="/#book-now-form" id="floatingBookNowBtn" class="floating-action-btn book-btn" onclick="scrollToBookingForm(event)" title="Book Your Ride">
          <i class="fas fa-taxi"></i>
          <span>Book Now</span>
      </a>
- </div>
 
- <!-- Floating Sidebar -->
- <div class="floating-contact">
+     <!-- Quick Contact Sub-group (Call & WhatsApp) -->
+     <div class="floating-contact-sub">
+         <!-- Call Button -->
+         <a href="tel:+919452667708" class="floating-action-btn call-btn" title="Call Us">
+             <i class="bi bi-telephone-fill"></i>
+             <span class="btn-label">Call Us</span>
+         </a>
 
-     <!-- Call Button -->
-     <a href="tel:+919452667708" class="call-btn">
-         <i class="bi bi-telephone-fill"></i>
-     </a>
-
-     <!-- WhatsApp Button -->
-     <a href="https://wa.me/919452667708" target="_blank" class="whatsapp-btn">
-         <i class="bi bi-whatsapp"></i>
-     </a>
-
+         <!-- WhatsApp Button -->
+         <a href="https://wa.me/919452667708" target="_blank" class="floating-action-btn whatsapp-btn" title="WhatsApp Us">
+             <i class="bi bi-whatsapp"></i>
+             <span class="btn-label">WhatsApp</span>
+         </a>
+     </div>
  </div>
 
  <script>
@@ -407,37 +408,135 @@ document.addEventListener("keydown", function (e) {
         }
     }
 
-    /* Floating Book Now (Left Side) */
-    .floating-book-now {
+    /* Floating Left Actions (Book Now, Call, WhatsApp on Left Side) */
+    .floating-left-actions {
         position: fixed;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
         z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 
-    .floating-book-now a.floating-book-btn {
+    .floating-left-actions .floating-action-btn {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
+        justify-content: center;
+        text-decoration: none !important;
+        color: #ffffff !important;
+        font-weight: 700;
+        box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.22);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    /* Book Now Button */
+    .floating-left-actions .floating-action-btn.book-btn {
         background: linear-gradient(135deg, #fdc800 0%, #f59e0b 100%);
         color: #0b1118 !important;
         font-size: 14px;
-        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         padding: 12px 18px 12px 14px;
         border-radius: 0 30px 30px 0;
-        box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.25);
-        text-decoration: none !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
+        gap: 8px;
     }
 
-    .floating-book-now a.floating-book-btn i {
+    .floating-left-actions .floating-action-btn.book-btn i {
         font-size: 16px;
         color: #0b1118;
         animation: carBounce 2s infinite ease-in-out;
+    }
+
+    .floating-left-actions .floating-action-btn.book-btn:hover {
+        padding-left: 18px;
+        padding-right: 24px;
+        background: linear-gradient(135deg, #0F766E 0%, #115E59 100%);
+        color: #ffffff !important;
+        box-shadow: 3px 6px 20px rgba(15, 118, 110, 0.45);
+    }
+
+    .floating-left-actions .floating-action-btn.book-btn:hover i {
+        color: #fdc800;
+    }
+
+    /* Sub-group for Call & WhatsApp */
+    .floating-left-actions .floating-contact-sub {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Call Button */
+    .floating-left-actions .floating-action-btn.call-btn {
+        background: #0d6efd;
+        height: 48px;
+        min-width: 48px;
+        padding: 0 14px;
+        border-radius: 0 10px 10px 0;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .floating-left-actions .floating-action-btn.call-btn i {
+        font-size: 19px;
+        color: #ffffff;
+    }
+
+    .floating-left-actions .floating-action-btn.call-btn .btn-label {
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-width 0.3s ease, opacity 0.3s ease;
+    }
+
+    .floating-left-actions .floating-action-btn.call-btn:hover {
+        background: #0b5ed7;
+        box-shadow: 3px 6px 20px rgba(13, 110, 253, 0.4);
+    }
+
+    .floating-left-actions .floating-action-btn.call-btn:hover .btn-label {
+        max-width: 80px;
+        opacity: 1;
+    }
+
+    /* WhatsApp Button */
+    .floating-left-actions .floating-action-btn.whatsapp-btn {
+        background: #25D366;
+        height: 48px;
+        min-width: 48px;
+        padding: 0 14px;
+        border-radius: 0 10px 10px 0;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .floating-left-actions .floating-action-btn.whatsapp-btn i {
+        font-size: 21px;
+        color: #ffffff;
+    }
+
+    .floating-left-actions .floating-action-btn.whatsapp-btn .btn-label {
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-width 0.3s ease, opacity 0.3s ease;
+    }
+
+    .floating-left-actions .floating-action-btn.whatsapp-btn:hover {
+        background: #1eb855;
+        box-shadow: 3px 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .floating-left-actions .floating-action-btn.whatsapp-btn:hover .btn-label {
+        max-width: 90px;
+        opacity: 1;
     }
 
     @keyframes carBounce {
@@ -449,30 +548,46 @@ document.addEventListener("keydown", function (e) {
         }
     }
 
-    .floating-book-now a.floating-book-btn:hover {
-        padding-left: 20px;
-        padding-right: 24px;
-        background: linear-gradient(135deg, #0F766E 0%, #115E59 100%);
-        color: #ffffff !important;
-        box-shadow: 3px 6px 20px rgba(15, 118, 110, 0.45);
-    }
-
-    .floating-book-now a.floating-book-btn:hover i {
-        color: #fdc800;
-    }
-
+    /* Mobile responsive */
     @media (max-width: 768px) {
-        .floating-book-now {
+        .floating-left-actions {
             top: auto;
             bottom: 20px;
             left: 12px;
             transform: none;
+            gap: 8px;
         }
-        .floating-book-now a.floating-book-btn {
+
+        .floating-left-actions .floating-action-btn.book-btn {
             border-radius: 30px;
-            padding: 10px 16px;
+            padding: 9px 15px;
             font-size: 13px;
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
         }
+
+        .floating-left-actions .floating-contact-sub {
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .floating-left-actions .floating-action-btn.call-btn,
+        .floating-left-actions .floating-action-btn.whatsapp-btn {
+            height: 44px;
+            width: 44px;
+            min-width: 44px;
+            padding: 0;
+            border-radius: 50%;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        }
+
+        .floating-left-actions .floating-action-btn.call-btn .btn-label,
+        .floating-left-actions .floating-action-btn.whatsapp-btn .btn-label {
+            display: none !important;
+        }
+    }
+
+    /* Hide/deactivate legacy right floating-contact */
+    .floating-contact {
+        display: none !important;
     }
 </style>
