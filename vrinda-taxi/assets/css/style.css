@@ -4829,6 +4829,13 @@ label {
   color: var(--theme-color);
   padding-left: 5px;
 }
+.service-sidebar .widget .category a.active {
+  color: var(--theme-color);
+  font-weight: 700;
+  padding-left: 8px;
+  background: rgba(15, 118, 110, 0.08);
+  border-radius: 6px;
+}
 .service-sidebar .widget .category a i {
   margin-right: 5px;
 }

@@ -163,34 +163,27 @@ class TourPackageController extends Controller
 
     public function show($id)
     {
-
         if (!is_numeric($id)) {
-            return  redirect()->back()->with('error', 'Invalid tour package ID.');
+            return redirect()->route('package')->with('error', 'Invalid tour package ID.');
         }
-
-        $tourPackages = TourPackage::get();
 
         $tour = TourPackage::find($id);
-        if($tour){
-                   $itineraries = TourItinerary::where('tour_package_id', $id)->get();
-
-                    $inclusions = TourInclusion::where('tour_package_id', $id)->get();
-
-                    $exclusions = TourExclusion::where('tour_package_id', $id)->get();
-
-                    return view('front-end.tour-details', compact(
-                                                        'tourPackages',
-                                                        'tour',
-                                                        'itineraries',
-                                                        'inclusions',
-                                                        'exclusions'
-                    ));
-        }
-        else {
-               return  redirect()->back()->with('error', 'Invalid tour package ID.');
+        if (!$tour) {
+            return redirect()->route('package')->with('error', 'Tour package not found.');
         }
 
-        
+        $tourPackages = TourPackage::orderBy('id', 'asc')->get();
+        $itineraries = TourItinerary::where('tour_package_id', $id)->orderBy('day_number', 'asc')->get();
+        $inclusions = TourInclusion::where('tour_package_id', $id)->get();
+        $exclusions = TourExclusion::where('tour_package_id', $id)->get();
+
+        return view('front-end.tour-details', compact(
+            'tourPackages',
+            'tour',
+            'itineraries',
+            'inclusions',
+            'exclusions'
+        ));
     }
 
     public function tourBooking(){
