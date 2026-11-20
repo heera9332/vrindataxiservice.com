@@ -21,7 +21,7 @@ class Booking extends Model
         'note',
         'distance_km',
         'total_distance',
-        // 'fare',
+        'fare',
         'status',
         'booking_no',
     ];

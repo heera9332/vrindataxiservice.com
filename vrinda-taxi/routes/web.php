@@ -175,6 +175,9 @@ Route::prefix('admin')->group(function () {
 
 });
 
+// Booking Two-Step Flow: Step 1 -> /booking/checkout (Customer info) -> Proceed -> /booking/success/{id}
+Route::match(['get', 'post'], '/booking/checkout', [BookingController::class, 'checkout'])->name('booking.checkout');
+Route::post('/booking/confirm', [BookingController::class, 'confirmBooking'])->name('booking.confirm');
 Route::post('/booking/calculate', [BookingController::class, 'calculate'])->name('booking.calculate');
 
 Route::get('/', [HomeController::class, 'index']);

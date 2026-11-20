@@ -21,77 +21,154 @@ class BookingController extends Controller
                 return view('admin.bookings.index', compact('bookings'));
             }
 
-        public function calculate(Request $request)
-        {
-            $request->validate([
-                'name'=>'required',
-                'email'=>'required',
-                'trip_type' => 'required',
-                'pickup_location' => 'required',
-                'drop_location' => 'required',
-                'ride_date' => 'required',
-                'distance_km' => 'required'
-            ]);
-
-            $distance = (float) $request->distance_km;
-            $trip = $request->trip_type;
-
-            // Pricing logic
-            if ($trip == "one_way") {
-                $rate = 12;
-                $totalDistance = $distance;
-            } elseif ($trip == "round_trip") {
-                $rate = 10;
-                $totalDistance = $distance * 2;
-            } else { // local
-                $rate = 500;
-                $totalDistance = 0;
-            }
-
-            $fare = ($trip == "local")
-                ? $rate
-                : $totalDistance * $rate;
-
-            if ($fare < 300) {
-                $fare = 300;
-            }
-
-            $booking_no =  $this->generateBookingNumber();
-
-            $rideDateTime = Carbon::parse($request->ride_date);
-            $ride_date = $rideDateTime->format('Y-m-d'); // 2026-06-24
-            $ride_time = $rideDateTime->format('H:i');   // 23:45
-            $return_date = null;
-            $return_time = null;
-              
-           if($request->return_date){
-                $returnDateTime = Carbon::parse($request->return_date);
-                $return_date = $returnDateTime->format('Y-m-d'); // 2026-06-24
-                $return_time = $returnDateTime->format('H:i'); 
-           }
-
-            // 🔥 SAVE IN DATABASE
-            $booking = Booking::create([
-                'booking_no' =>$booking_no,
-                'trip_type' => $trip,
-                'name'=>$request->name,
-                'phone'=>$request->phone,
-                'email'=>$request->email,
-                'pickup_location'=>$request->pickup_location,
-                'drop_location' => $request->drop_location,
-                'ride_date' => $ride_date,
-                'ride_time' => $ride_time,
-                'return_date' => $return_date,
-                'return_time' => $return_time,
-                'distance_km' => $distance,
-                'total_distance' => $totalDistance,
-                'fare' => $fare,
-            ]);
-
-            Mail::to('help@vrindataxiservice.com')->send(new BookingNotification($booking));
-            // optional: pass ID to next page
-            return redirect()->route('booking.success', $booking->id);
+    public function calculate(Request $request)
+    {
+        // If customer details are already submitted, confirm the booking
+        if ($request->filled('name') && $request->filled('email') && $request->filled('phone')) {
+            return $this->confirmBooking($request);
         }
+
+        // Otherwise pass to second page: /booking/checkout
+        return $this->checkout($request);
+    }
+
+    public function checkout(Request $request)
+    {
+        $distance = (float) ($request->distance_km ?: session('booking_draft.distance_km', 25));
+        $trip = $request->trip_type ?: session('booking_draft.trip_type', 'one_way');
+        $pickup = $request->pickup_location ?: session('booking_draft.pickup_location', 'Vrindavan');
+        $drop = $request->drop_location ?: session('booking_draft.drop_location', 'Mathura');
+
+        // Pricing logic
+        if ($trip == "one_way") {
+            $rate = 12;
+            $totalDistance = $distance;
+        } elseif ($trip == "round_trip") {
+            $rate = 10;
+            $totalDistance = $distance * 2;
+        } else { // local
+            $rate = 500;
+            $totalDistance = 0;
+        }
+
+        $fare = ($trip == "local")
+            ? $rate
+            : round($totalDistance * $rate);
+
+        if ($fare < 300) {
+            $fare = 300;
+        }
+
+        $ride_date_input = $request->ride_date ?: session('booking_draft.ride_date');
+        $ride_date = $ride_date_input 
+            ? Carbon::parse($ride_date_input)->format('Y-m-d H:i') 
+            : now()->addHours(2)->format('Y-m-d H:i');
+
+        $return_date_input = $request->return_date ?: session('booking_draft.return_date');
+        $return_date = $return_date_input 
+            ? Carbon::parse($return_date_input)->format('Y-m-d H:i') 
+            : null;
+
+        $draft = [
+            'trip_type' => $trip,
+            'pickup_location' => $pickup,
+            'drop_location' => $drop,
+            'ride_date' => $ride_date,
+            'return_date' => $return_date,
+            'distance_km' => $distance,
+            'total_distance' => $totalDistance,
+            'rate' => $rate,
+            'fare' => $fare,
+            'name' => $request->name ?? old('name', session('booking_draft.name', '')),
+            'phone' => $request->phone ?? old('phone', session('booking_draft.phone', '')),
+            'email' => $request->email ?? old('email', session('booking_draft.email', '')),
+        ];
+
+        session(['booking_draft' => $draft]);
+
+        $tourPackages = TourPackage::latest()->get();
+
+        return view('front-end.checkout', compact('draft', 'tourPackages'));
+    }
+
+    public function confirmBooking(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:15',
+            'email' => 'required|email|max:255',
+            'trip_type' => 'required',
+            'pickup_location' => 'required',
+            'drop_location' => 'required',
+            'ride_date' => 'required',
+        ]);
+
+        $distance = (float) ($request->distance_km ?: 25);
+        $trip = $request->trip_type;
+
+        // Pricing logic
+        if ($trip == "one_way") {
+            $rate = 12;
+            $totalDistance = $distance;
+        } elseif ($trip == "round_trip") {
+            $rate = 10;
+            $totalDistance = $distance * 2;
+        } else { // local
+            $rate = 500;
+            $totalDistance = 0;
+        }
+
+        $fare = $request->fare 
+            ? (float) $request->fare 
+            : (($trip == "local") ? $rate : round($totalDistance * $rate));
+
+        if ($fare < 300) {
+            $fare = 300;
+        }
+
+        $booking_no = $this->generateBookingNumber();
+
+        $rideDateTime = Carbon::parse($request->ride_date);
+        $ride_date = $rideDateTime->format('Y-m-d');
+        $ride_time = $rideDateTime->format('H:i');
+        $return_date = null;
+        $return_time = null;
+
+        if ($request->return_date) {
+            $returnDateTime = Carbon::parse($request->return_date);
+            $return_date = $returnDateTime->format('Y-m-d');
+            $return_time = $returnDateTime->format('H:i');
+        }
+
+        $booking = Booking::create([
+            'booking_no' => $booking_no,
+            'trip_type' => $trip,
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'pickup_location' => $request->pickup_location,
+            'drop_location' => $request->drop_location,
+            'ride_date' => $ride_date,
+            'ride_time' => $ride_time,
+            'return_date' => $return_date,
+            'return_time' => $return_time,
+            'distance_km' => $distance,
+            'total_distance' => $totalDistance,
+            'fare' => $fare,
+            'note' => $request->note ?? null,
+            'status' => 'pending',
+        ]);
+
+        try {
+            Mail::to('help@vrindataxiservice.com')->send(new BookingNotification($booking));
+        } catch (\Throwable $e) {
+            // Keep user experience smooth even if mail transport encounters an issue
+        }
+
+        session()->forget('booking_draft');
+
+        return redirect()->route('booking.success', $booking->id);
+    }
 
         private function generateBookingNumber()
             {

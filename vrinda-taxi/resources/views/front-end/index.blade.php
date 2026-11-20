@@ -301,62 +301,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                 </div>
 
-                <form method="POST" action="{{ route('booking.calculate') }}" onsubmit="return calculateDistanceBeforeSubmit(event)">
+                <form method="POST" action="{{ route('booking.checkout') }}" onsubmit="return calculateDistanceBeforeSubmit(event)">
                     @csrf
 
-                    <input type="hidden" name="trip_type" id="tripType" value="">
+                    <input type="hidden" name="trip_type" id="tripType" value="round_trip">
                     <input type="hidden" name="distance_km" id="distanceKm">
 
-                    <div class="row g-3">
-
-                        <!-- Name -->
-                        <div class="col-lg-3">
-                            <div class="form-group">
-                                <label class="form-label">Full Name</label>
-                                <div class="form-icon">
-                                    <i class="far fa-user"></i>
-                                    <input type="text"
-                                        class="form-control"
-                                        name="name"
-                                        placeholder="Enter Your Name"
-                                        required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mobile -->
-                        <div class="col-lg-3">
-                            <div class="form-group">
-                                <label class="form-label">Mobile Number</label>
-                                <div class="form-icon">
-                                    <i class="far fa-phone"></i>
-                                    <input type="tel"
-                                        class="form-control"
-                                        name="phone"
-                                        placeholder="Enter Mobile Number"
-                                        maxlength="10"
-                                        required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3">
-                            <div class="form-group">
-                                <label class="form-label">Email Id</label>
-                                <div class="form-icon">
-                                    <i class="fa fa-envelope"></i>
-                                    <input type="email"
-                                        class="form-control"
-                                        name="email"
-                                        placeholder="Enter Email ID"
-                                        required>
-                                </div>
-                            </div>
-                        </div><div class="w-100"></div>
-
+                    <div class="row g-3 align-items-end">
 
                         <!-- Pickup -->
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-md-6">
                             <div class="form-group">
                                 <label for="pickup" class="form-label">Pick Up Location</label>
                                 <div class="form-icon">
@@ -372,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <!-- Drop -->
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-md-6">
                             <div class="form-group">
                                 <label for="drop" class="form-label">Drop off Location</label>
                                 <div class="form-icon">
@@ -388,9 +342,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <!-- Pickup Date -->
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-md-6">
                             <div class="form-group">
-                                <label class="form-label">Pick Up Date</label>
+                                <label class="form-label">Pick Up Date & Time</label>
                                 <div class="form-icon">
                                     <i class="far fa-calendar-range"></i>
                                     <input type="datetime-local"
@@ -403,9 +357,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <!-- Return -->
-                        <div class="col-lg-3" id="returnDateWrapper">
+                        <div class="col-lg-3 col-md-6" id="returnDateWrapper">
                             <div class="form-group">
-                                <label class="form-label">Return Date</label>
+                                <label class="form-label">Return Date & Time</label>
                                 <div class="form-icon">
                                     <i class="far fa-calendar-range"></i>
                                     <input type="datetime-local"
@@ -414,16 +368,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         id="returnDate">
                                 </div>
                             </div>
-                        </div>
-
+                        </div> 
+                    </div>
                         <!-- Button -->
-                        <div class="col-lg-2">
-                            <button style="margin-top:36px;" class="theme-btn w-100" type="submit">
-                                Book Car <i class="fas fa-arrow-right"></i>
+                        <div class="mt-3">
+                            <button class="w-auto theme-btn px-4 py-2" type="submit" style="font-size: 16px; font-weight: 700;">
+                                Proceed to Booking <i class="fas fa-arrow-right ms-2"></i>
                             </button>
                         </div>
-
-                    </div>
                 </form>
             </div>
         </div>
@@ -2037,30 +1989,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-            function calculateDistanceBeforeSubmit(event) {
+        function calculateDistanceBeforeSubmit(event) {
             event.preventDefault();
 
+            const form = event.target;
             const pickup = document.getElementById("pickup").value.trim();
             const drop = document.getElementById("drop").value.trim();
             const pickupDate = document.getElementById("pickupDate").value;
-            const returnDate = document.getElementById("returnDate").value;
-            const trip = document.getElementById("tripType").value;
+            const returnDate = document.getElementById("returnDate") ? document.getElementById("returnDate").value : '';
+            let trip = document.getElementById("tripType").value;
 
-            if(trip == '' || trip=='undefined')
-            {
-                event.preventDefault();
-
-                document.getElementById('tripTypeError')
-                        .classList.remove('d-none');
-
-                return false;
+            if(!trip || trip === 'undefined') {
+                trip = 'round_trip';
+                document.getElementById('tripType').value = 'round_trip';
             }
-            
-
-            document.getElementById('tripTypeError').classList.add('d-none');
 
             if (!pickup || !drop || !pickupDate) {
-                alert("Please fill all required fields.");
+                alert("Please fill all required fields (Pickup, Drop, and Date).");
                 return false;
             }
 
@@ -2069,62 +2014,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 return false;
             }
 
-            const service = new google.maps.DistanceMatrixService();
-
-            service.getDistanceMatrix({
-                origins: [pickup],
-                destinations: [drop],
-                travelMode: google.maps.TravelMode.DRIVING,
-                unitSystem: google.maps.UnitSystem.METRIC
-            }, function(response, status) {
-
-                if (status !== "OK") {
-                    alert("Distance calculation failed.");
-                    return;
-                }
-
-                const element = response.rows[0].elements[0];
-
-                if (element.status !== "OK") {
-                    alert("Invalid location.");
-                    return;
-                }
-
-                const distanceKm = (element.distance.value / 1000).toFixed(2);
-
-                document.getElementById("distanceKm").value = distanceKm;
-
-                // ADD pickup/drop/date into hidden fields dynamically
-                const form = event.target;
-
-                let input1 = document.createElement("input");
-                input1.type = "hidden";
-                input1.name = "pickup_location";
-                input1.value = pickup;
-                form.appendChild(input1);
-
-                let input2 = document.createElement("input");
-                input2.type = "hidden";
-                input2.name = "drop_location";
-                input2.value = drop;
-                form.appendChild(input2);
-
-                let input3 = document.createElement("input");
-                input3.name = "ride_date";
-                input3.type = "hidden";
-                input3.value = pickupDate;
-                form.appendChild(input3);
-
-                if (trip === "round_trip") {
-                    let input4 = document.createElement("input");
-                    input4.name = "return_date";
-                    input4.type = "hidden";
-                    input4.value = returnDate;
-                    form.appendChild(input4);
-                }
-
+            function submitWithDistance(distKm) {
+                document.getElementById("distanceKm").value = distKm;
                 form.submit();
-            });
+            }
+
+            if (typeof google !== "undefined" && google.maps && google.maps.DistanceMatrixService) {
+                const service = new google.maps.DistanceMatrixService();
+                service.getDistanceMatrix({
+                    origins: [pickup],
+                    destinations: [drop],
+                    travelMode: google.maps.TravelMode.DRIVING,
+                    unitSystem: google.maps.UnitSystem.METRIC
+                }, function(response, status) {
+                    if (status === "OK" && response.rows && response.rows[0] && response.rows[0].elements[0] && response.rows[0].elements[0].status === "OK") {
+                        const distanceKm = (response.rows[0].elements[0].distance.value / 1000).toFixed(2);
+                        submitWithDistance(distanceKm);
+                    } else {
+                        submitWithDistance(25);
+                    }
+                });
+            } else {
+                submitWithDistance(25);
+            }
 
             return false;
         }
