@@ -1,23 +1,19 @@
-    <!-- preloader -->
 
-    <!--<div class="preloader">-->
-
-    <!--    <div class="loader-ripple">-->
-
-    <!--        <div></div>-->
-
-    <!--        <div></div>-->
-
-    <!--    </div>-->
-
-    <!--</div>-->
-
-    <!-- preloader end -->
+<!--Design By VIP Digital Hub -->
 
 
+  <link rel="icon" type="image/x-icon" href="{{ asset('vrinda-taxi/assets/img/logo/favicon.png') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <!-- header area -->
-
+    <!-- css -->
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/all-fontawesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/magnific-popup.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/slimselect.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/flatpickr.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('vrinda-taxi/assets/css/style.css') }}" />    
     <header class="header header-2">
 
         <!-- header top -->
@@ -88,7 +84,10 @@
 
                         </div>
 
-<!--
+
+
+
+
                         <div class="header-top-social">
 
                             <span>Follow Us: </span>
@@ -102,7 +101,11 @@
                             <a href="#"><i class="fab fa-linkedin"></i></a>
 
                         </div>
--->
+
+
+
+
+
 
                     </div>
 
@@ -126,9 +129,17 @@
 
                     <a class="navbar-brand" href="/">
 
-                        <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="logo" />
-
-                    </a>
+                        <!--<img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="logo" />-->
+                        
+                        
+                        
+                        
+                        <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" 
+     alt="logo"
+     style="width:150px; height:auto; max-height:80px; object-fit:contain; " />
+                        
+                        
+                        </a>
 
                     <div class="mobile-menu-right">
 
@@ -156,9 +167,21 @@
 
                             <a href="/" class="offcanvas-brand" id="offcanvasNavbarLabel">
 
-                                <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="" />
+                                <!--<img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="" />-->
+                                
+                                
+                                <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" 
+     alt="logo"
+     style="width:120px; height:auto; max-height:50px; object-fit:contain; display:block; margin-left:0; margin-right:auto;" />
+                                
 
                             </a>
+                            
+                            
+                            
+                            
+                            
+                            
 
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
 
@@ -174,62 +197,37 @@
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                                <!--<li class="nav-item"><a class="nav-link" href="/">Home</a></li>-->
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About</a></li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/" data-bs-toggle="dropdown">Home</a>
+                                    <ul class="dropdown-menu fade-down">
+                                        <li><a class="dropdown-item" href="/about">About</a></li>
+                                         <li><a class="dropdown-item" href="/">Gallery</a></li>
+                                    </ul>
+                                </li>
 
 
 
-
-
-                                <li class="nav-item"><a class="nav-link" href="{{ route('package') }}">Package</a></li>
 
                                 <li class="nav-item dropdown">
 
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Book Taxi</a>
 
-                                    <ul class="dropdown-menu fade-down">
-
-                                        <li><a class="dropdown-item" href="vrindavan-to-rishikesh-taxi-service.php">Mathura to Delhi Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="vrindavan-to-pushkar-taxi-service.php">Mathura to Agra Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="vrindavan-to-manali-taxi-service.php">Mathura to Vrindavan Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="vrindavan-to-mathura-taxi-service.php">Mathura to Ayodhya Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="vrindavan-to-lucknow-taxi-service.php">Mathura to Prayagraj Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="vrindavan-to-local-taxi-service.php">Mathura to Jaipur Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Mathura to Noida Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Mathura to Gurgaon Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Mathura to Haridwar Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Mathura to Varanasi Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Ghaziabad Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Chandigarh Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Shimla Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Manali Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Kanpur Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Lucknow Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Bareilly Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Khatu Shyam Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Nainital Taxi Service</a></li>
-
+                                    <ul class="dropdown-menu fade-down" style="max-height: 420px; overflow-y: auto;">
+                                        @if(isset($bookTaxiPosts) && $bookTaxiPosts->count() > 0)
+                                            @foreach($bookTaxiPosts as $btPost)
+                                                <li><a class="dropdown-item" href="{{ url($btPost->slug) }}">{{ $btPost->title }}</a></li>
+                                            @endforeach
+                                        @else
+                                            <li><a class="dropdown-item" href="/vrindavan-to-delhi">Mathura to Delhi Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-agra">Mathura to Agra Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Rishikesh Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-jaipur">Mathura to Jaipur Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/khatoo-shyam">Mathura to Khatu Shyam Taxi Service</a></li>
+                                        @endif
                                     </ul>
 
                                 </li>
@@ -240,18 +238,18 @@
 
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Our Location</a>
 
-                                    <ul class="dropdown-menu fade-down">
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Mathura</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Vrindavan</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Delhi</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Agra</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Ayodhya</a></li>
-
+                                    <ul class="dropdown-menu fade-down" style="max-height: 420px; overflow-y: auto;">
+                                        @if(isset($ourLocationPosts) && $ourLocationPosts->count() > 0)
+                                            @foreach($ourLocationPosts as $olPost)
+                                                <li><a class="dropdown-item" href="{{ url($olPost->slug) }}">{{ $olPost->title }}</a></li>
+                                            @endforeach
+                                        @else
+                                            <li><a class="dropdown-item" href="/mathura">Taxi Service in Mathura</a></li>
+                                            <li><a class="dropdown-item" href="/">Taxi Service in Vrindavan</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-delhi">Taxi Service in Delhi</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-agra">Taxi Service in Agra</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-ayodhya">Taxi Service in Ayodhya</a></li>
+                                        @endif
                                     </ul>
 
                                 </li>
@@ -262,8 +260,15 @@
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tour Package</a>
 
                                     <ul class="dropdown-menu fade-down">
+                                       @foreach($tourPackages as $tour)
+                                            <li>
+                                                <a class="dropdown-item" href="{{ route('tour-packages.show', $tour->id) }}">
+                                                    {{ $tour->location }}
+                                                </a>
+                                            </li>
+                                        @endforeach
 
-                                        <li><a class="dropdown-item" href="vrindavan.php">Vrindavan</a></li>
+                                        <!-- <li><a class="dropdown-item" href="vrindavan.php">Vrindavan</a></li>
 
                                         <li><a class="dropdown-item" href="mathura.php">Mathura</a></li>
 
@@ -282,7 +287,7 @@
                                          <li><a class="dropdown-item" href="haridwar.php">Haridwar</a></li>
                                         
                                          <li><a class="dropdown-item" href="khatoo-shyam.php">Khatoo Shyam ji</a></li>
-
+ -->
                                     </ul>
 
                                 </li>
@@ -300,16 +305,67 @@
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                                
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+                              
+
+                                <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Services
+    </a>
+    <ul class="dropdown-menu shadow-sm" aria-labelledby="servicesDropdown">
+        
+        
+        
+        
+       
+        <li>
+            <a class="dropdown-item py-2" href="/package">
+                <i class="fa-solid fa-plane-departure me-2 text-secondary"></i> Taxi Package
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a class="dropdown-item py-2" href="{{ url('/airport-taxi') }}">
+                <i class="fa-solid fa-plane-departure me-2 text-secondary"></i> Airport Taxi
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="dropdown-item py-2" href="{{ url('/outstation-taxi') }}">
+                <i class="fa-solid fa-car-side me-2 text-secondary"></i> Outstation Taxi
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item py-2" href="{{ url('/vrindavan-sightseeing') }}">
+                <i class="fa-solid fa-monument me-2 text-secondary"></i> Sightseeing
+            </a>
+        </li>
+        @if(isset($servicesPosts) && $servicesPosts->count() > 0)
+            <li><hr class="dropdown-divider"></li>
+            @foreach($servicesPosts as $srvPost)
+                <li>
+                    <a class="dropdown-item py-2" href="{{ url($srvPost->slug) }}">
+                        <i class="fa-solid fa-car me-2 text-secondary"></i> {{ $srvPost->title }}
+                    </a>
+                </li>
+            @endforeach
+        @endif
+    </ul>
+</li>
 
 
 
 
-
+  <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
 
 
 
@@ -323,15 +379,15 @@
 
                                 <!-- <div class="search-btn">
 
-                    <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+                  <!--  <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>-->
 
-                  </div> -->
+                  <!--</div> -->
 
                                 <div class="nav-btn">
-
-                                    <a href="{{ route('contact') }}" class="theme-btn"><span class="far fa-car"></span> Book A Car</a>
-
-                                </div>
+                                <a href="#book-now-form" class="theme-btn">
+                                    <span class="far fa-car"></span> Book A Car
+                                </a>
+                            </div>
 
                                 <button type="button" class="sidebar-btn nav-right-link" data-bs-toggle="offcanvas" data-bs-target="#sidebarPopup">
 
@@ -506,71 +562,5 @@
         </div>
 
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17366349643">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17366349643');
-</script>
-
-
-
-
-
-
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K362P6XC');</script>
-<!-- End Google Tag Manager -->
-
-<!--2. Paste this code immediately after the opening <body> tag:-->
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K362P6XC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-<!--[26/09, 12:12 pm] Ocean Ads Patna Google Edward: *Install Google Tag Manager*-->
-<!--Copy the code below and paste it onto every page of your website.-->
-<!--*1. Paste this code as high in the <head> of the page as possible:*-->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K362P6XC');</script>
-<!-- End Google Tag Manager -->
-
-<!--*2. Paste this code immediately after the opening <body> tag:*-->
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K362P6XC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-
-
-
 
     <!-- sidebar-popup end -->

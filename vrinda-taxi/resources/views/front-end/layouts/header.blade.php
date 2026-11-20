@@ -216,46 +216,18 @@
 
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Book Taxi</a>
 
-                                    <ul class="dropdown-menu fade-down">
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Delhi Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Agra Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Vrindavan Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Ayodhya Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Prayagraj Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Jaipur Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Noida Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Gurgaon Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Haridwar Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Varanasi Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Ghaziabad Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Chandigarh Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Shimla Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Manali Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Kanpur Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Lucknow Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Bareilly Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Khatu Shyam Taxi Service</a></li>
-
-                                        <li><a class="dropdown-item" href="#"> Mathura to Nainital Taxi Service</a></li>
-
+                                    <ul class="dropdown-menu fade-down" style="max-height: 420px; overflow-y: auto;">
+                                        @if(isset($bookTaxiPosts) && $bookTaxiPosts->count() > 0)
+                                            @foreach($bookTaxiPosts as $btPost)
+                                                <li><a class="dropdown-item" href="{{ url($btPost->slug) }}">{{ $btPost->title }}</a></li>
+                                            @endforeach
+                                        @else
+                                            <li><a class="dropdown-item" href="/vrindavan-to-delhi">Mathura to Delhi Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-agra">Mathura to Agra Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Rishikesh Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-jaipur">Mathura to Jaipur Taxi Service</a></li>
+                                            <li><a class="dropdown-item" href="/khatoo-shyam">Mathura to Khatu Shyam Taxi Service</a></li>
+                                        @endif
                                     </ul>
 
                                 </li>
@@ -266,18 +238,18 @@
 
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Our Location</a>
 
-                                    <ul class="dropdown-menu fade-down">
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Mathura</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Vrindavan</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Delhi</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Agra</a></li>
-
-                                        <li><a class="dropdown-item" href="#">Taxi Service in Ayodhya</a></li>
-
+                                    <ul class="dropdown-menu fade-down" style="max-height: 420px; overflow-y: auto;">
+                                        @if(isset($ourLocationPosts) && $ourLocationPosts->count() > 0)
+                                            @foreach($ourLocationPosts as $olPost)
+                                                <li><a class="dropdown-item" href="{{ url($olPost->slug) }}">{{ $olPost->title }}</a></li>
+                                            @endforeach
+                                        @else
+                                            <li><a class="dropdown-item" href="/mathura">Taxi Service in Mathura</a></li>
+                                            <li><a class="dropdown-item" href="/">Taxi Service in Vrindavan</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-delhi">Taxi Service in Delhi</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-agra">Taxi Service in Agra</a></li>
+                                            <li><a class="dropdown-item" href="/vrindavan-to-ayodhya">Taxi Service in Ayodhya</a></li>
+                                        @endif
                                     </ul>
 
                                 </li>
@@ -377,6 +349,16 @@
                 <i class="fa-solid fa-monument me-2 text-secondary"></i> Sightseeing
             </a>
         </li>
+        @if(isset($servicesPosts) && $servicesPosts->count() > 0)
+            <li><hr class="dropdown-divider"></li>
+            @foreach($servicesPosts as $srvPost)
+                <li>
+                    <a class="dropdown-item py-2" href="{{ url($srvPost->slug) }}">
+                        <i class="fa-solid fa-car me-2 text-secondary"></i> {{ $srvPost->title }}
+                    </a>
+                </li>
+            @endforeach
+        @endif
     </ul>
 </li>
 

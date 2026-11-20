@@ -9,6 +9,8 @@ use App\Http\Controllers\TourPackageController;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TourManagementController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 
 
 
@@ -119,8 +121,6 @@ Route::get('/llms-full.txt', function () {
     abort(404);
 });
 
-Route::get('/{slug}', [BookingController::class, 'taxiService'])->name('taxi.service');
-
 
 Route::prefix('admin')->group(function () {
 
@@ -167,6 +167,10 @@ Route::prefix('admin')->group(function () {
             Route::put('/tour-packages/update/{id}', [TourPackageController::class, 'update'])->name('tour-packages.update');
 
             Route::delete('/tour-packages/delete/{id}', [TourPackageController::class, 'destroy'])->name('tour-packages.destroy');
+
+            // Blog & Dynamic SEO Post System Admin Routes
+            Route::resource('categories', CategoryController::class);
+            Route::resource('posts', PostController::class);
      });
 
 });
@@ -179,7 +183,13 @@ Route::get('/booking/{id}/whatsapp', [BookingController::class, 'sendWhatsApp'])
 
 Route::get('/tour-package/{id}', [TourPackageController::class, 'show'])->name('tour-packages.show');
 
-
 Route::get('/booking/success/{id}', [BookingController::class, 'success'])
     ->name('booking.success');
+
+// Public Blog / Dynamic SEO Post Route: /post/{slug}
+Route::get('/post/{slug}', [PostController::class, 'showPublic'])->name('posts.showPublic');
+
+// Two-Tier Dynamic Catch-All Slug Router: /{slug}
+Route::get('/{slug}', [PostController::class, 'showSlug'])->name('taxi.service');
+
 
