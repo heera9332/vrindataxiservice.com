@@ -128,18 +128,8 @@
                 <div class="container position-relative">
 
                     <a class="navbar-brand" href="/">
-
-                        <!--<img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="logo" />-->
-                        
-                        
-                        
-                        
-                        <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" 
-     alt="logo"
-     style="width:150px; height:auto; max-height:80px; object-fit:contain; " />
-                        
-                        
-                        </a>
+                        <img src="{{ asset('vrinda-taxi/assets/img/logo/logo.png') }}" alt="Vrinda Taxi Service" />
+                    </a>
 
                     <div class="mobile-menu-right">
 
