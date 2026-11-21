@@ -117,6 +117,11 @@
            scroll-margin-top: 150px !important;
         }
 
+        #braj-sant-darshan,
+        #gallery-lord {
+           scroll-margin-top: 100px !important;
+        }
+
         html{
           scroll-behavior: smooth;
         }
@@ -1207,7 +1212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <div class="gallery-area py-120">
+        <div class="gallery-area py-120" id="braj-sant-darshan">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
@@ -1280,7 +1285,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-        <div class="gallery-area py-120">
+        <div class="gallery-area py-120" id="gallery-lord">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
