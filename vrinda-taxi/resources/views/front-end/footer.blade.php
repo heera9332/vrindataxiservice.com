@@ -200,6 +200,18 @@
      </div>
  </div>
 
+ <!-- Mobile Quick Action Bar (Sticky Bottom Bar for Mobile Devices) -->
+ <aside class="mobile-quick-bar" id="mobileQuickBar" aria-label="Mobile Quick Booking Bar">
+   <a href="tel:+919452667708" class="quick-bar-btn quick-bar-call" style="background-color: #F59E0B; color: #000000;" aria-label="Call Cab Now +91 9452667708">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"></path></svg>
+     <span style="color: #000000;">Call Cab Now</span>
+   </a>
+   <a href="https://wa.me/919452667708?text=Hello%20Vrinda%20Taxi%20Service%2C%20I%20want%20to%20book%20a%20taxi." class="quick-bar-btn quick-bar-whatsapp" style="background-color: #166534; color: #FFFFFF;" target="_blank" rel="noopener" aria-label="WhatsApp Booking for Vrinda Taxi Service">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.5C8.87 7.5 8.6 7.56 8.36 7.83C8.12 8.09 7.45 10C7.45 11.28 8.38 12.5 8.52 12.69C8.65 12.87 10.33 15.47 12.91 16.58C13.52 16.85 14 17.01 14.37 17.13C14.99 17.33 15.55 17.3 16 17.23C16.5 17.16 17.54 16.6 17.75 16C17.96 15.4 17.96 14.88 17.9 14.78C17.84 14.68 17.67 14.61 17.42 14.49C17.17 14.37 15.93 13.76 15.7 13.68C15.48 13.6 15.31 13.56 15.15 13.8C14.99 14.04 14.51 14.61 14.37 14.78C14.23 14.94 14.09 14.97 13.84 14.85C13.59 14.73 12.79 14.46 11.85 13.62C11.11 12.97 10.61 12.16 10.47 11.91C10.33 11.66 10.46 11.53 10.58 11.41C10.69 11.3 10.83 11.12 10.95 10.97C11.08 10.82 11.12 10.72 11.2 10.56C11.28 10.4 11.24 10.25 11.18 10.13C11.12 10.01 10.63 8.81 10.42 8.32C10.22 7.84 10.02 7.9 9.87 7.9C9.72 7.9 9.55 7.9 9.39 7.9C9.22 7.9 9.04 7.5 9.04 7.5Z"></path></svg>
+     <span style="color: #FFFFFF;">WhatsApp Booking</span>
+   </a>
+ </aside>
+
  <script>
  function scrollToBookingForm(e) {
      var bookingForm = document.getElementById("book-now-form");
@@ -548,13 +560,86 @@ document.addEventListener("keydown", function (e) {
         }
     }
 
+    /* Mobile Quick Booking Bar */
+    .mobile-quick-bar {
+        display: none;
+    }
+
     /* Mobile responsive */
     @media (max-width: 768px) {
+        body {
+            padding-bottom: calc(58px + max(10px, env(safe-area-inset-bottom, 0px))) !important;
+        }
+
+        .mobile-quick-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            z-index: 9999;
+            background: rgba(7, 10, 18, 0.96);
+            border-top: 1px solid rgba(245, 158, 11, 0.35);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 8px 12px;
+            padding-bottom: max(8px, env(safe-area-inset-bottom, 8px));
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .quick-bar-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 11px 8px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.86rem;
+            text-decoration: none !important;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            min-width: 0;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+
+        .quick-bar-btn svg {
+            flex-shrink: 0;
+        }
+
+        .quick-bar-btn span {
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .quick-bar-call {
+            background-color: #F59E0B;
+            background-image: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            color: #000000 !important;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .quick-bar-whatsapp {
+            background-color: #166534;
+            background-image: linear-gradient(135deg, #15803D 0%, #166534 100%);
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 12px rgba(22, 101, 52, 0.3);
+        }
+
+        .quick-bar-btn:active {
+            transform: scale(0.97);
+        }
+
         .floating-left-actions {
-            top: auto;
-            bottom: 20px;
-            left: 12px;
-            transform: none;
+            top: auto !important;
+            bottom: calc(66px + max(8px, env(safe-area-inset-bottom, 8px))) !important;
+            left: 12px !important;
+            transform: none !important;
             gap: 8px;
         }
 
@@ -562,27 +647,24 @@ document.addEventListener("keydown", function (e) {
             border-radius: 30px;
             padding: 9px 15px;
             font-size: 13px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
         }
 
+        /* Hide floating call and whatsapp circular buttons on mobile since mobile-quick-bar is present */
         .floating-left-actions .floating-contact-sub {
-            flex-direction: row;
-            gap: 10px;
-        }
-
-        .floating-left-actions .floating-action-btn.call-btn,
-        .floating-left-actions .floating-action-btn.whatsapp-btn {
-            height: 44px;
-            width: 44px;
-            min-width: 44px;
-            padding: 0;
-            border-radius: 50%;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-        }
-
-        .floating-left-actions .floating-action-btn.call-btn .btn-label,
-        .floating-left-actions .floating-action-btn.whatsapp-btn .btn-label {
             display: none !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .quick-bar-btn {
+            font-size: 0.78rem;
+            padding: 9px 4px;
+            gap: 4px;
+        }
+        .quick-bar-btn svg {
+            width: 16px;
+            height: 16px;
         }
     }
 

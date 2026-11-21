@@ -7213,13 +7213,86 @@ span.flatpickr-weekday {
     }
 }
 
+/* Mobile Quick Booking Bar */
+.mobile-quick-bar {
+    display: none;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: calc(58px + max(10px, env(safe-area-inset-bottom, 0px))) !important;
+    }
+
+    .mobile-quick-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        z-index: 9999;
+        background: rgba(7, 10, 18, 0.96);
+        border-top: 1px solid rgba(245, 158, 11, 0.35);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 8px 12px;
+        padding-bottom: max(8px, env(safe-area-inset-bottom, 8px));
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .quick-bar-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 11px 8px;
+        border-radius: 9999px;
+        font-weight: 700;
+        font-size: 0.86rem;
+        text-decoration: none !important;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        min-width: 0;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
+    .quick-bar-btn svg {
+        flex-shrink: 0;
+    }
+
+    .quick-bar-btn span {
+        font-weight: 700;
+        letter-spacing: 0.2px;
+    }
+
+    .quick-bar-call {
+        background-color: #F59E0B;
+        background-image: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        color: #000000 !important;
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+
+    .quick-bar-whatsapp {
+        background-color: #166534;
+        background-image: linear-gradient(135deg, #15803D 0%, #166534 100%);
+        color: #FFFFFF !important;
+        box-shadow: 0 4px 12px rgba(22, 101, 52, 0.3);
+    }
+
+    .quick-bar-btn:active {
+        transform: scale(0.97);
+    }
+
     .floating-left-actions {
-        top: auto;
-        bottom: 20px;
-        left: 12px;
-        transform: none;
+        top: auto !important;
+        bottom: calc(66px + max(8px, env(safe-area-inset-bottom, 8px))) !important;
+        left: 12px !important;
+        transform: none !important;
         gap: 8px;
     }
 
@@ -7227,27 +7300,24 @@ span.flatpickr-weekday {
         border-radius: 30px;
         padding: 9px 15px;
         font-size: 13px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     }
 
+    /* Hide floating call and whatsapp circular buttons on mobile since mobile-quick-bar is present */
     .floating-left-actions .floating-contact-sub {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .floating-left-actions .floating-action-btn.call-btn,
-    .floating-left-actions .floating-action-btn.whatsapp-btn {
-        height: 44px;
-        width: 44px;
-        min-width: 44px;
-        padding: 0;
-        border-radius: 50%;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-    }
-
-    .floating-left-actions .floating-action-btn.call-btn .btn-label,
-    .floating-left-actions .floating-action-btn.whatsapp-btn .btn-label {
         display: none !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .quick-bar-btn {
+        font-size: 0.78rem;
+        padding: 9px 4px;
+        gap: 4px;
+    }
+    .quick-bar-btn svg {
+        width: 16px;
+        height: 16px;
     }
 }
 

@@ -171,20 +171,41 @@
  <script src="assets/js/flatpickr.min.js"></script>
  <script src="assets/js/main.js"></script>
  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1190e059c5bc497bafd35e121aae37b1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
- <!-- Floating Sidebar -->
- <div class="floating-contact">
-
-     <!-- Call Button -->
-     <a href="tel:+919452667708" class="call-btn">
-         <i class="bi bi-telephone-fill"></i>
+ <!-- Floating Actions (Left Side: Book Now, Call, WhatsApp) -->
+ <div class="floating-left-actions">
+     <!-- Book Now Button -->
+     <a href="/#book-now-form" id="floatingBookNowBtn" class="floating-action-btn book-btn" title="Book Your Ride">
+         <i class="fas fa-taxi"></i>
+         <span>Book Now</span>
      </a>
 
-     <!-- WhatsApp Button -->
-     <a href="https://wa.me/919452667708" target="_blank" class="whatsapp-btn">
-         <i class="bi bi-whatsapp"></i>
-     </a>
+     <!-- Quick Contact Sub-group (Call & WhatsApp) -->
+     <div class="floating-contact-sub">
+         <!-- Call Button -->
+         <a href="tel:+919452667708" class="floating-action-btn call-btn" title="Call Us">
+             <i class="bi bi-telephone-fill"></i>
+             <span class="btn-label">Call Us</span>
+         </a>
 
+         <!-- WhatsApp Button -->
+         <a href="https://wa.me/919452667708" target="_blank" class="floating-action-btn whatsapp-btn" title="WhatsApp Us">
+             <i class="bi bi-whatsapp"></i>
+             <span class="btn-label">WhatsApp</span>
+         </a>
+     </div>
  </div>
+
+ <!-- Mobile Quick Action Bar (Fixed Sticky Bottom Bar for Mobile Devices) -->
+ <aside class="mobile-quick-bar" id="mobileQuickBar" aria-label="Mobile Quick Booking Bar">
+   <a href="tel:+919452667708" class="quick-bar-btn quick-bar-call" style="background-color: #F59E0B; color: #000000;" aria-label="Call Cab Now +91 9452667708">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"></path></svg>
+     <span style="color: #000000;">Call Cab Now</span>
+   </a>
+   <a href="https://wa.me/919452667708?text=Hello%20Vrinda%20Taxi%20Service%2C%20I%20want%20to%20book%20a%20taxi." class="quick-bar-btn quick-bar-whatsapp" style="background-color: #166534; color: #FFFFFF;" target="_blank" rel="noopener" aria-label="WhatsApp Booking for Vrinda Taxi Service">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.5C8.87 7.5 8.6 7.56 8.36 7.83C8.12 8.09 7.45 8.72 7.45 10C7.45 11.28 8.38 12.5 8.52 12.69C8.65 12.87 10.33 15.47 12.91 16.58C13.52 16.85 14 17.01 14.37 17.13C14.99 17.33 15.55 17.3 16 17.23C16.5 17.16 17.54 16.6 17.75 16C17.96 15.4 17.96 14.88 17.9 14.78C17.84 14.68 17.67 14.61 17.42 14.49C17.17 14.37 15.93 13.76 15.7 13.68C15.48 13.6 15.31 13.56 15.15 13.8C14.99 14.04 14.51 14.61 14.37 14.78C14.23 14.94 14.09 14.97 13.84 14.85C13.59 14.73 12.79 14.46 11.85 13.62C11.11 12.97 10.61 12.16 10.47 11.91C10.33 11.66 10.46 11.53 10.58 11.41C10.69 11.3 10.83 11.12 10.95 10.97C11.08 10.82 11.12 10.72 11.2 10.56C11.28 10.4 11.24 10.25 11.18 10.13C11.12 10.01 10.63 8.81 10.42 8.32C10.22 7.84 10.02 7.9 9.87 7.9C9.72 7.9 9.55 7.9 9.39 7.9C9.22 7.9 9.04 7.5 9.04 7.5Z"></path></svg>
+     <span style="color: #FFFFFF;">WhatsApp Booking</span>
+   </a>
+ </aside>
 
   <script>
 // Disable Right Click

@@ -274,7 +274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- booking form -->
         <div class="booking-form ng-mt" id="book-now-form">
-            <div class="booking-form-wrap bkf-w">
+            <div class="booking-form-wrap bkf-w container">
                 <div class="shape"></div>
 
                 <h4 class="title">Book Your Ride</h4>
