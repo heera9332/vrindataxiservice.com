@@ -145,6 +145,130 @@
             color: #fff;
         }
 
+        /* Tour Package Blog Items & Call / WhatsApp Buttons */
+        .blog-area .blog-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .blog-area .blog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-area .blog-img {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-area .blog-img img {
+            border-radius: 16px;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .blog-area .blog-item:hover .blog-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-area .blog-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-area .blog-title a {
+            color: #1e293b;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.4;
+            transition: color 0.2s ease;
+            text-decoration: none;
+        }
+
+        .blog-area .blog-title a:hover {
+            color: var(--theme-color, #0F766E);
+        }
+
+        .package-btn-wrap {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 15px;
+        }
+
+        .pkg-call-btn,
+        .pkg-whatsapp-btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px !important;
+            border-radius: 50px !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .package-btn-wrap .theme-btn i,
+        .pkg-call-btn i,
+        .pkg-whatsapp-btn i {
+            margin-right: 6px !important;
+            margin-left: 0 !important;
+            transform: none !important;
+            font-size: 15px !important;
+        }
+
+        /* Call Now: Distinct Deep Teal theme color */
+        .pkg-call-btn {
+            background-color: var(--theme-color, #0F766E) !important;
+            border: 1px solid var(--theme-color, #0F766E) !important;
+            color: #ffffff !important;
+        }
+
+        .pkg-call-btn::before {
+            background-color: #000d83 !important;
+        }
+
+        .pkg-call-btn:hover {
+            background-color: #0b5852 !important;
+            border-color: #0b5852 !important;
+            color: #ffffff !important;
+            box-shadow: 0 5px 14px rgba(15, 118, 110, 0.35);
+        }
+
+        /* WhatsApp: Distinct Official WhatsApp Green */
+        .pkg-whatsapp-btn {
+            background-color: #25D366 !important;
+            border: 1px solid #25D366 !important;
+            color: #ffffff !important;
+        }
+
+        .pkg-whatsapp-btn::before {
+            background-color: #128C7E !important;
+        }
+
+        .pkg-whatsapp-btn:hover {
+            background-color: #1eb956 !important;
+            border-color: #1eb956 !important;
+            color: #ffffff !important;
+            box-shadow: 0 5px 14px rgba(37, 211, 102, 0.4);
+        }
+
     </style>
     
    <!-- Google tag (gtag.js) -->
@@ -577,130 +701,207 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="row g-4">
+                    @if(isset($tourPackages) && $tourPackages->count() > 0)
+                        @foreach($tourPackages as $pkg)
+                            @php
+                                $pkgImg = null;
+                                if (!empty($pkg->featured_image)) {
+                                    $pkgImg = asset('uploads/tours/' . $pkg->featured_image);
+                                } elseif (!empty($pkg->banner_image)) {
+                                    $pkgImg = asset('uploads/tours/' . $pkg->banner_image);
+                                } else {
+                                    $fallbackIdx = ($loop->index % 6) + 1;
+                                    $pkgImg = asset('vrinda-taxi/assets/img/spiritual/package-' . $fallbackIdx . '.webp');
+                                }
 
-                    <!-- Package 1 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img mb-4">
-                                <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-1.webp') }}" alt=" Days Mathura Vrindavan Tour">
+                                $pkgUrl = route('tour-packages.show', $pkg->id);
+                                $waText = "Hello Vrinda Taxi, I want to book the tour package: " . $pkg->title . " (Package ID: " . $pkg->id . ")";
+                            @endphp
+                            <div class="col-md-6 col-lg-4">
+                                <div class="blog-item h-100 d-flex flex-column">
+                                    <div class="blog-img mb-4 position-relative overflow-hidden">
+                                        <a href="{{ $pkgUrl }}">
+                                            <img src="{{ $pkgImg }}" 
+                                                 alt="{{ $pkg->title }}"
+                                                 onerror="this.onerror=null;this.src='{{ asset('vrinda-taxi/assets/img/spiritual/package-' . (($loop->index % 6) + 1) . '.webp') }}';">
+                                        </a>
+                                        @if($pkg->duration)
+                                            <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 shadow-sm px-2 py-1 fw-bold" style="font-size: 13px; z-index: 2;">
+                                                <i class="far fa-clock me-1"></i> {{ $pkg->duration }}
+                                            </span>
+                                        @endif
+                                        @if($pkg->location)
+                                            <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 shadow-sm px-2 py-1" style="font-size: 12px; opacity: 0.9; z-index: 2;">
+                                                <i class="fas fa-map-marker-alt me-1 text-warning"></i> {{ $pkg->location }}
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="blog-info d-flex flex-column flex-grow-1">
+                                        <h4 class="blog-title">
+                                           <a href="{{ $pkgUrl }}">{{ $pkg->title }}</a>
+                                        </h4>
+                                        <p class="flex-grow-1">
+                                            @if($pkg->itineraries && $pkg->itineraries->count() > 0 && !empty($pkg->itineraries->first()->description))
+                                                {{ Str::limit(strip_tags($pkg->itineraries->first()->description), 110) }}
+                                            @elseif($pkg->itineraries && $pkg->itineraries->count() > 0 && !empty($pkg->itineraries->first()->title))
+                                                Day 1: {{ Str::limit($pkg->itineraries->first()->title, 90) }}
+                                            @elseif($pkg->location)
+                                                Complete spiritual exploration covering {{ $pkg->location }}.
+                                            @else
+                                                A peaceful spiritual journey covering the most sacred and divine places of Vrindavan.
+                                            @endif
+                                        </p>
+                                        <div class="package-btn-wrap">
+                                            <a href="tel:+919452667708" class="theme-btn pkg-call-btn">
+                                                <i class="fas fa-phone-alt"></i> Call Now
+                                            </a>
+                                            <a href="https://wa.me/919452667708?text={{ urlencode($waText) }}" target="_blank" rel="noopener" class="theme-btn pkg-whatsapp-btn">
+                                                <i class="fab fa-whatsapp"></i> Whatsapp
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="blog-info">
-                                <h4 class="blog-title">
-                                   <a href="vrindavan.php"> Vrindavan Divine Experience</a>
-                                </h4>
-                                <p>A peaceful spiritual journey covering the most sacred and divine places of Vrindavan.</p>
-                                <a href="tel:+919452667708" class="theme-btn">Call Now</a>
-                                <a href="https://wa.me/919452667708" class="theme-btn">Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Package 2 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img mb-4">
-                                <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-2.webp') }}" alt="3 Days Mathura Bharatpur Tour">
-                            </div>
-                            <div class="blog-info">
-                                <h4 class="blog-title">
-                                    <a href="vrindavan.php"> Vrindavan & Barsana Yatra</a>
-                                </h4>
-                                <p>A soulful journey through Vrindavan and Barsana, experiencing Krishnaâ€™s divine leelas.</p>
-                                <a href="tel:+919452667708" class="theme-btn">Call Now</a>
-                                <a href="https://wa.me/919452667708" class="theme-btn">Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Package 4 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img mb-4">
-                                <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-3.webp') }}" alt="Braj 84 Kos Yatra">
-                            </div>
-                            <div class="blog-info">
-                                <h4 class="blog-title">
-                                    <a href="vrindavan.php">  Braj Bhoomi Spiritual Journey</a>
-                                </h4>
-                                <p>A complete spiritual exploration of Braj Bhoomi covering major sacred destinations.</p>
-                                <a href="tel:+919452667708" class="theme-btn">Call Now</a>
-                                <a href="https://wa.me/919452667708" class="theme-btn">Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Package 5 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img mb-4">
-                                <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-4.webp') }}" alt="Full Day Mathura Vrindavan">
-                            </div>
-                            <div class="blog-info">
-                                <h4 class="blog-title">
-                                    <a href="vrindavan.php">  Krishna Leela Path Yatra</a>
-                                </h4>
-                                <p>Walk through the divine childhood and leela sites of Lord Krishna.</p>
-                                <a href="tel:+919452667708" class="theme-btn">Call Now</a>
-                                <a href="https://wa.me/919452667708" class="theme-btn">Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Package 6 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img mb-4">
-                                <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-5.webp') }}" alt="Same Day Tour from Delhi">
-                            </div>
-                            <div class="blog-info">
-                                <h4 class="blog-title">
-                                    <a href="vrindavan.php"> Complete Braj Darshan</a>
-                                </h4>
-                                <p>A deep spiritual journey covering hidden forests and sacred places of Braj.</p>
-                                <a href="tel:+919452667708" class="theme-btn">Call Now</a>
-                                <a href="https://wa.me/919452667708" class="theme-btn">Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Package 7 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item">
-                            <div class="blog-img mb-4">
-                                <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-6.webp') }}" alt="Mathura Vrindavan with Agra">
-                            </div>
-                            <div class="blog-info">
-                                <h4 class="blog-title">
-                                    <a href="vrindavan.php"> The Hidden Vrindavan Yatra</a>
-                                </h4>
-                                <p>The ultimate spiritual experience combining Braj Bhoomi and the sacred Char Dham.</p>
-                                <a href="tel:+919452667708" class="theme-btn">Call Now</a>
-                                <a href="https://wa.me/919452667708" class="theme-btn">Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <!-- Package 12 -->
-                    <!-- <div class="col-md-6 col-lg-4">
-                            <div class="blog-item">
+                        @endforeach
+                    @else
+                        <!-- Package 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="blog-item h-100 d-flex flex-column">
                                 <div class="blog-img mb-4">
-                                    <img src="{{ asset('vrinda-taxi/assets/img/pkg/p13.webp') }}" alt="Haridwar Rishikesh Tour">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-1.webp') }}" alt="Days Mathura Vrindavan Tour">
                                 </div>
-                                <div class="blog-info">
+                                <div class="blog-info d-flex flex-column flex-grow-1">
                                     <h4 class="blog-title">
-              Haridwar & Rishikesh Tour
-            </h4>
-                                    <p>Pilgrimage with Ganga Aarti and yoga city experience.</p>
-                                    <a href="tel:+919452667708" class="theme-btn">Call Now</a>
+                                       <a href="vrindavan.php">Vrindavan Divine Experience</a>
+                                    </h4>
+                                    <p class="flex-grow-1">A peaceful spiritual journey covering the most sacred and divine places of Vrindavan.</p>
+                                    <div class="package-btn-wrap">
+                                        <a href="tel:+919452667708" class="theme-btn pkg-call-btn">
+                                            <i class="fas fa-phone-alt"></i> Call Now
+                                        </a>
+                                        <a href="https://wa.me/919452667708?text={{ urlencode('Hello, I want to inquire about Vrindavan Divine Experience Package on Vrinda Taxi Service.') }}" target="_blank" rel="noopener" class="theme-btn pkg-whatsapp-btn">
+                                            <i class="fab fa-whatsapp"></i> Whatsapp
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
 
+                        <!-- Package 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="blog-item h-100 d-flex flex-column">
+                                <div class="blog-img mb-4">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-2.webp') }}" alt="3 Days Mathura Bharatpur Tour">
+                                </div>
+                                <div class="blog-info d-flex flex-column flex-grow-1">
+                                    <h4 class="blog-title">
+                                        <a href="vrindavan.php">Vrindavan & Barsana Yatra</a>
+                                    </h4>
+                                    <p class="flex-grow-1">A soulful journey through Vrindavan and Barsana, experiencing Krishna’s divine leelas.</p>
+                                    <div class="package-btn-wrap">
+                                        <a href="tel:+919452667708" class="theme-btn pkg-call-btn">
+                                            <i class="fas fa-phone-alt"></i> Call Now
+                                        </a>
+                                        <a href="https://wa.me/919452667708?text={{ urlencode('Hello, I want to inquire about Vrindavan & Barsana Yatra Package on Vrinda Taxi Service.') }}" target="_blank" rel="noopener" class="theme-btn pkg-whatsapp-btn">
+                                            <i class="fab fa-whatsapp"></i> Whatsapp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package 4 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="blog-item h-100 d-flex flex-column">
+                                <div class="blog-img mb-4">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-3.webp') }}" alt="Braj 84 Kos Yatra">
+                                </div>
+                                <div class="blog-info d-flex flex-column flex-grow-1">
+                                    <h4 class="blog-title">
+                                        <a href="vrindavan.php">Braj Bhoomi Spiritual Journey</a>
+                                    </h4>
+                                    <p class="flex-grow-1">A complete spiritual exploration of Braj Bhoomi covering major sacred destinations.</p>
+                                    <div class="package-btn-wrap">
+                                        <a href="tel:+919452667708" class="theme-btn pkg-call-btn">
+                                            <i class="fas fa-phone-alt"></i> Call Now
+                                        </a>
+                                        <a href="https://wa.me/919452667708?text={{ urlencode('Hello, I want to inquire about Braj Bhoomi Spiritual Journey Package on Vrinda Taxi Service.') }}" target="_blank" rel="noopener" class="theme-btn pkg-whatsapp-btn">
+                                            <i class="fab fa-whatsapp"></i> Whatsapp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package 5 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="blog-item h-100 d-flex flex-column">
+                                <div class="blog-img mb-4">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-4.webp') }}" alt="Full Day Mathura Vrindavan">
+                                </div>
+                                <div class="blog-info d-flex flex-column flex-grow-1">
+                                    <h4 class="blog-title">
+                                        <a href="vrindavan.php">Krishna Leela Path Yatra</a>
+                                    </h4>
+                                    <p class="flex-grow-1">Walk through the divine childhood and leela sites of Lord Krishna.</p>
+                                    <div class="package-btn-wrap">
+                                        <a href="tel:+919452667708" class="theme-btn pkg-call-btn">
+                                            <i class="fas fa-phone-alt"></i> Call Now
+                                        </a>
+                                        <a href="https://wa.me/919452667708?text={{ urlencode('Hello, I want to inquire about Krishna Leela Path Yatra Package on Vrinda Taxi Service.') }}" target="_blank" rel="noopener" class="theme-btn pkg-whatsapp-btn">
+                                            <i class="fab fa-whatsapp"></i> Whatsapp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package 6 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="blog-item h-100 d-flex flex-column">
+                                <div class="blog-img mb-4">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-5.webp') }}" alt="Same Day Tour from Delhi">
+                                </div>
+                                <div class="blog-info d-flex flex-column flex-grow-1">
+                                    <h4 class="blog-title">
+                                        <a href="vrindavan.php">Complete Braj Darshan</a>
+                                    </h4>
+                                    <p class="flex-grow-1">A deep spiritual journey covering hidden forests and sacred places of Braj.</p>
+                                    <div class="package-btn-wrap">
+                                        <a href="tel:+919452667708" class="theme-btn pkg-call-btn">
+                                            <i class="fas fa-phone-alt"></i> Call Now
+                                        </a>
+                                        <a href="https://wa.me/919452667708?text={{ urlencode('Hello, I want to inquire about Complete Braj Darshan Package on Vrinda Taxi Service.') }}" target="_blank" rel="noopener" class="theme-btn pkg-whatsapp-btn">
+                                            <i class="fab fa-whatsapp"></i> Whatsapp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package 7 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="blog-item h-100 d-flex flex-column">
+                                <div class="blog-img mb-4">
+                                    <img src="{{ asset('vrinda-taxi/assets/img/spiritual/package-6.webp') }}" alt="Mathura Vrindavan with Agra">
+                                </div>
+                                <div class="blog-info d-flex flex-column flex-grow-1">
+                                    <h4 class="blog-title">
+                                        <a href="vrindavan.php">The Hidden Vrindavan Yatra</a>
+                                    </h4>
+                                    <p class="flex-grow-1">The ultimate spiritual experience combining Braj Bhoomi and the sacred Char Dham.</p>
+                                    <div class="package-btn-wrap">
+                                        <a href="tel:+919452667708" class="theme-btn pkg-call-btn">
+                                            <i class="fas fa-phone-alt"></i> Call Now
+                                        </a>
+                                        <a href="https://wa.me/919452667708?text={{ urlencode('Hello, I want to inquire about The Hidden Vrindavan Yatra Package on Vrinda Taxi Service.') }}" target="_blank" rel="noopener" class="theme-btn pkg-whatsapp-btn">
+                                            <i class="fab fa-whatsapp"></i> Whatsapp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

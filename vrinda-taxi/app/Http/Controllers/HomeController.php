@@ -15,7 +15,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $tourPackages = TourPackage::get();
+        $tourPackages = TourPackage::with(['itineraries' => function($q) {
+            $q->orderBy('day_number', 'asc');
+        }, 'inclusions'])->latest()->get();
 
         $cars = Car::where('status',1)
             ->orderBy('sort_order')
