@@ -4996,6 +4996,7 @@ label {
 }
 .car-area .car-img {
   margin: 10px 0;
+  border-radius: 12px;
 }
 .car-area .car-top {
   display: flex;
@@ -5019,9 +5020,11 @@ label {
   text-align: center;
   border-radius: 50px;
   box-shadow: var(--box-shadow);
+  display: none;
 }
 .car-area .car-top .favorite-btn:hover {
   background: var(--theme-color);
+  display: none;
 }
 .car-area .car-content h4 a {
   font-size: 17px;

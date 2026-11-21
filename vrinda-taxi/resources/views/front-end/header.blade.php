@@ -205,7 +205,8 @@
                                     <a class="nav-link dropdown-toggle" href="/" data-bs-toggle="dropdown">Home</a>
                                     <ul class="dropdown-menu fade-down">
                                         <li><a class="dropdown-item" href="/about">About</a></li>
-                                         <li><a class="dropdown-item" href="/">Gallery</a></li>
+                                         <li><a class="dropdown-item" href="/">Gallery - Braj Sant Darshan</a></li> 
+                                         <li><a class="dropdown-item" href="/">Gallery - Lord</a></li>
                                     </ul>
                                 </li>
 
