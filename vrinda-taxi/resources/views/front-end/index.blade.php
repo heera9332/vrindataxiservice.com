@@ -1572,8 +1572,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 <div class="content">
                                     <div class="info">
-                                        <span class="counter" data-count="+" data-to="150" data-speed="3000">150</span>
-                                        <span class="unit">k</span>
+                                        <span class="counter" data-count="+" data-to="150" data-speed="3000">50</span>
+                                        <span class="unit">units</span>
                                     </div>
                                     <h4 class="title">Available Cars</h4>
                                 </div>
@@ -1586,8 +1586,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 <div class="content">
                                     <div class="info">
-                                        <span class="counter" data-count="+" data-to="115" data-speed="3000">115</span>
-                                        <span class="unit">k</span>
+                                        <span class="counter" data-count="+" data-to="115" data-speed="3000">500</span>
+                                        <span class="unit">+</span>
                                     </div>
                                     <h4 class="title">Happy Clients</h4>
                                 </div>
@@ -1601,7 +1601,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="content">
                                     <div class="info">
                                         <span class="counter" data-count="+" data-to="50" data-speed="3000">50</span>
-                                        <span class="unit">k</span>
+                                        <span class="unit"></span>
                                     </div>
                                     <h4 class="title">Experts Drivers</h4>
                                 </div>
@@ -1615,7 +1615,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="content">
                                     <div class="info">
                                         <span class="counter" data-count="+" data-to="120" data-speed="3000">120</span>
-                                        <span class="unit">k</span>
+                                        <span class="unit"></span>
                                     </div>
                                     <h4 class="title">Road Trip Done</h4>
                                 </div>
