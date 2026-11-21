@@ -591,7 +591,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-6">
                         <div class="about-right wow fadeInUp" data-wow-delay=".2s">
                             <div class="site-heading mb-3">
-                                <span class="site-title-tagline"><i class="far fa-car"></i> About Us â€“ Vrinda Taxi Service</span>
+                                <span class="site-title-tagline"><i class="far fa-car"></i> About Us - Vrinda Taxi Service</span>
                                 <!-- <h3 class="site-title">We Provide <span>Quality Car Rental</span> Services</h3> -->
                             </div>
                             <p class="about-text">
@@ -1114,7 +1114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <div class="card-body d-flex flex-column">
                                 <h5 class="fw-bold"><a href="/mathura">Mathura Vrindavan Tour with Gokul</a></h5>
-                                <p class="text-muted">Explore Lord Krishnaâ€™s childhood place.</p>
+                                <p class="text-muted">Explore Lord Krishna's childhood place.</p>
                                 <ul class="list-unstyled small">
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Gokul Visit</li>
                                     <li><i class="fa-solid fa-check text-success me-2"></i>Temple Darshan</li>
@@ -1633,7 +1633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container">
 
                 <div class="text-center mb-5">
-                    <h2 class="fw-bold">Additional Spiritual Sevas â€“ As Per Your Wish</h2>
+                    <h2 class="fw-bold">Additional Spiritual Sevas As Per Your Wish</h2>
                     <p class="text-muted">
                         If you wish, we also provide traditional spiritual sevas and devotional offerings as per availability.
                     </p>
@@ -1739,84 +1739,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-        <!-- gallery-area -->
-        <div class="gallery-area py-120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 mx-auto">
-                        <div class="site-heading text-center wow fadeInUp" data-wow-delay=".2s">
-                            <span class="site-title-tagline"><i class="far fa-car"></i>our Gallery</span>
-                            <h3 class="site-title">Comfortable Hotel Stay â€“ <span>If You Wish</span></h3>
-                            <div class="heading-divider"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-4 popup-gallery">
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('vrinda-taxi/assets/img/gallery/01.webp') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('vrinda-taxi/assets/img/gallery/01.webp') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".4s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('vrinda-taxi/assets/img/gallery/02.webp') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('vrinda-taxi/assets/img/gallery/02.webp') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".6s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('vrinda-taxi/assets/img/gallery/03.webp') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('vrinda-taxi/assets/img/gallery/03.webp') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".8s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('vrinda-taxi/assets/img/gallery/04.webp') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('vrinda-taxi/assets/img/gallery/04.webp') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('vrinda-taxi/assets/img/gallery/05.webp') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('vrinda-taxi/assets/img/gallery/05.webp') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".4s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('vrinda-taxi/assets/img/gallery/06.webp') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('vrinda-taxi/assets/img/gallery/06.webp') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
+        <!-- gallery-area --> 
 
         <div class="gallery-area py-120">
             <div class="container">
